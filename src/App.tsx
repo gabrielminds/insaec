@@ -10,11 +10,11 @@ import {
 
 import './App.css'
 
-import heroPhoto from './assets/insaec/IMG_1130.jpg'
-import institutionHeroPhoto from './assets/insaec/IMG_1092.jpg'
-import vidaEscolarHeroPhoto from './assets/insaec/IMG_1088.jpg'
+import heroPhoto from './assets/insaec/IMG_1130.webp'
+import institutionHeroPhoto from './assets/insaec/IMG_1092.webp'
+import vidaEscolarHeroPhoto from './assets/insaec/IMG_1088.webp'
 import institutionAboutPhoto from './assets/insaec/2022-10-20(9).webp'
-import studentsPhoto from './assets/insaec/Estudiantes-1.jpg'
+import studentsPhoto from './assets/insaec/Estudiantes-1.webp'
 import proposalPhoto from './assets/insaec/2022-10-20(10).webp'
 import contactPhoto from './assets/insaec/2022-10-20.webp'
 import heroDivider from './assets/insaec/hero-organic-divider.svg'

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1366 768">
+  <!-- Generator: Adobe Illustrator 29.0.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 192)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #ff4986;
+      }
+
+      .st1 {
+        fill: #6f2a7c;
+      }
+
+      .st2 {
+        fill: #1e2c68;
+      }
+
+      .st3 {
+        isolation: isolate;
+      }
+
+      .st4 {
+        fill: #444;
+        font-family: NoirPro-Medium, 'Noir Pro';
+        font-size: 91.79px;
+        font-weight: 500;
+      }
+
+      .st5 {
+        fill: #5fc24b;
+      }
+
+      .st6 {
+        fill: #f9b002;
+      }
+
+      .st7 {
+        font-family: Boogaloo-Regular, Boogaloo;
+        font-size: 232.44px;
+      }
+
+      .st8 {
+        fill: #00b2e2;
+      }
+    </style>
+  </defs>
+  <g id="Mesa_de_trabajo_1" class="st3">
+    <g id="INSAEC">
+      <text class="st7" transform="translate(48.57 384) scale(1.08 1)"><tspan class="st2" x="0" y="0">I</tspan><tspan class="st8" x="67.17" y="0">N</tspan><tspan class="st0" x="193.62" y="0">S</tspan><tspan class="st5" x="304.03" y="0">A</tspan><tspan class="st6" x="423.97" y="0">E</tspan><tspan class="st1" x="527.86" y="0">C</tspan></text>
+      <text class="st4" transform="translate(53.03 494.1)"><tspan x="0" y="0">EDUCACIÓN BÁSICA INTEGRAL</tspan></text>
+    </g>
+  </g>
+</svg>

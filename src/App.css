@@ -1,0 +1,7110 @@
+/* =========================================================
+   INSAEC
+   ESTILOS PRINCIPALES
+========================================================= */
+
+.site {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+  position: relative;
+  z-index: 100;
+
+  width: min(100% - 40px, var(--container));
+  min-height: 68px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 32px;
+  padding: 10px 0;
+
+  background: #ffffff;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.brand-name {
+  color: var(--insaec-blue);
+
+  font-size: 1.65rem;
+  font-weight: 800;
+
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.brand-description {
+  margin-top: 5px;
+
+  color: var(--text-soft);
+
+  font-size: 0.68rem;
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 24px;
+  margin-left: auto;
+}
+
+.main-nav a {
+  color: var(--text);
+
+  font-size: 0.88rem;
+  font-weight: 600;
+
+  transition:
+    color 180ms ease,
+    opacity 180ms ease;
+}
+
+.main-nav a:hover {
+  color: var(--insaec-blue);
+}
+
+/* =========================================================
+   BOTONES
+========================================================= */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 46px;
+  padding: 0 22px;
+
+  border: 1px solid transparent;
+  border-radius: 999px;
+
+  font-size: 0.88rem;
+  font-weight: 700;
+
+  white-space: nowrap;
+  cursor: pointer;
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  color: #ffffff;
+  background: var(--insaec-blue);
+
+  box-shadow:
+    0 8px 20px rgba(23, 54, 93, 0.16);
+}
+
+.button-primary:hover {
+  box-shadow:
+    0 12px 26px rgba(23, 54, 93, 0.22);
+}
+
+.button-secondary {
+  color: var(--insaec-blue);
+  background: #ffffff;
+
+  border-color: rgba(23, 54, 93, 0.25);
+}
+
+.button-secondary:hover {
+  border-color: var(--insaec-blue);
+}
+
+/* =========================================================
+   HERO PRINCIPAL
+========================================================= */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+  min-height: calc(100vh - 68px);
+
+  overflow: hidden;
+
+  background: var(--insaec-blue);
+}
+
+/* =========================================================
+   HERO - CONTENIDO
+========================================================= */
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+
+  width: min(100% - 40px, var(--container));
+
+  min-height: calc(100vh - 82px);
+
+  margin: 0 auto;
+
+  padding: 70px 0 110px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* =========================================================
+   HERO - EYEBROW
+========================================================= */
+
+.hero .eyebrow {
+  margin: 0 0 22px;
+
+  color: #78c7f0;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   HERO - TITULO
+========================================================= */
+
+.hero h1 {
+  width: min(620px, 48vw);
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(
+    3.6rem,
+    5.7vw,
+    6.2rem
+  );
+
+  font-weight: 800;
+
+  letter-spacing: -0.055em;
+  line-height: 0.94;
+}
+
+/* =========================================================
+   HERO - TEXTO
+========================================================= */
+
+.hero-text {
+  width: min(540px, 42vw);
+
+  margin: 30px 0 0;
+
+  color: #ffffff;
+
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   HERO - BOTONES
+========================================================= */
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 32px;
+}
+
+.hero-button-primary {
+  color: var(--insaec-blue);
+  background: #ffffff;
+
+  box-shadow: none;
+}
+
+.hero-button-primary:hover {
+  color: var(--insaec-blue);
+  background: #ffffff;
+}
+
+.hero-button-secondary {
+  color: #ffffff;
+  background: transparent;
+
+  border-color: #ffffff;
+}
+
+.hero-button-secondary:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+
+  border-color: #ffffff;
+}
+
+/* =========================================================
+   HERO - ÁREA FOTOGRÁFICA
+========================================================= */
+
+.hero-visual {
+  position: absolute;
+
+  z-index: 2;
+
+  top: 0;
+  right: 0;
+
+  width: 64%;
+  height: 100%;
+
+  overflow: visible;
+}
+/* =========================================================
+   HERO - FOTOGRAFÍA
+========================================================= */
+
+.hero-photo {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: 42% center;
+}
+
+/* =========================================================
+   HERO - TRANSICIÓN ORGÁNICA
+========================================================= */
+
+.hero-divider {
+  position: absolute;
+
+  z-index: 3;
+
+  top: 0;
+  left: 0;
+
+  width: 38%;
+  height: 100%;
+
+  object-fit: fill;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   HERO - DECORACIONES
+========================================================= */
+
+.hero-decoration {
+  position: absolute;
+
+  z-index: 6;
+
+  height: auto;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero-decoration-top {
+  width: 175px;
+
+  left: -25px;
+  top: 40px;
+
+  opacity: 0.9;
+
+  transform: rotate(12deg);
+
+  filter:
+    drop-shadow(
+      0 10px 14px rgba(0, 0, 0, 0.12)
+    );
+}
+
+.hero-decoration-bottom {
+  width: 230px;
+
+  right: -38px;
+  bottom: 25px;
+
+  transform: rotate(-4deg);
+
+  filter:
+    drop-shadow(
+      0 14px 20px rgba(0, 0, 0, 0.14)
+    );
+}
+
+/* =========================================================
+   HERO - MENSAJE INFERIOR
+========================================================= */
+
+.hero-bottom-message {
+  position: absolute;
+
+  left: 0;
+  bottom: 42px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.hero-bottom-message img {
+  width: 54px;
+  height: 54px;
+
+  object-fit: contain;
+
+  opacity: 0.85;
+}
+
+.hero-bottom-line {
+  width: 1px;
+  height: 46px;
+
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.hero-bottom-message p {
+  margin: 0;
+
+  color: #79c8f1;
+
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+/* =========================================================
+   HERO INTERNO
+   Institución / Propuesta / Vida Escolar / etc.
+========================================================= */
+
+.inner-hero {
+  position: relative;
+
+  width: 100%;
+  height: 330px;
+
+  overflow: hidden;
+
+  background: var(--insaec-blue);
+}
+
+/* Fotografía */
+
+.inner-hero-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+/* Oscurecimiento */
+
+.inner-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 25, 45, 0.82) 0%,
+      rgba(10, 25, 45, 0.62) 45%,
+      rgba(10, 25, 45, 0.28) 100%
+    );
+}
+
+/* Contenido */
+
+.inner-hero-content {
+  position: relative;
+
+  z-index: 4;
+
+  width: min(100% - 40px, var(--container));
+
+  height: 100%;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.inner-hero-eyebrow {
+  margin: 0 0 14px;
+
+  color: #78c7f0;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.inner-hero-content h1 {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(
+    3rem,
+    5vw,
+    5rem
+  );
+
+  font-weight: 800;
+
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+}
+
+/* Pieza decorativa del Hero interno */
+
+.inner-hero-puzzle {
+  position: absolute;
+
+  z-index: 5;
+
+  right: 8%;
+  bottom: -55px;
+
+  width: 190px;
+  height: auto;
+
+  opacity: 0.92;
+
+  transform: rotate(-8deg);
+
+  pointer-events: none;
+
+  filter:
+    drop-shadow(
+      0 14px 20px rgba(0, 0, 0, 0.18)
+    );
+}
+/* =========================================================
+   VIDA ESCOLAR — HERO
+========================================================= */
+
+.vida-escolar-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 620px;
+
+  overflow: hidden;
+
+  background: var(--insaec-blue);
+
+  display: flex;
+  align-items: center;
+}
+
+.vida-escolar-hero-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center center;
+
+  transform: scale(1.02);
+}
+
+.vida-escolar-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 25, 45, 0.88) 0%,
+      rgba(10, 25, 45, 0.68) 38%,
+      rgba(10, 25, 45, 0.28) 72%,
+      rgba(10, 25, 45, 0.12) 100%
+    );
+}
+
+.vida-escolar-hero-content {
+  position: relative;
+
+  z-index: 4;
+
+  width: min(100% - 40px, var(--container));
+
+  margin: 0 auto;
+
+  padding: 90px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.vida-escolar-hero-content .eyebrow {
+  margin: 0 0 18px;
+
+  color: #78c7f0;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.vida-escolar-hero-content h1 {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(
+    3rem,
+    4.5vw,
+    4.8rem
+  );
+
+  font-weight: 800;
+
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+.vida-escolar-hero-content > p:not(.eyebrow) {
+  max-width: 600px;
+
+  margin: 28px 0 0;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.vida-escolar-hero-puzzle {
+  position: absolute;
+
+  right: 7%;
+  bottom: -65px;
+
+  z-index: 5;
+
+  width: 220px;
+  height: auto;
+
+  opacity: 0.94;
+
+  transform: rotate(-8deg);
+
+  pointer-events: none;
+
+  filter:
+    drop-shadow(
+      0 18px 28px rgba(0, 0, 0, 0.2)
+    );
+}
+/* =========================================================
+   VIDA ESCOLAR — VIVIMOS EL APRENDIZAJE
+========================================================= */
+
+.vida-escolar-learning-section {
+  position: relative;
+
+  padding: 120px 20px 130px;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+.vida-escolar-learning-section::after {
+  content: "";
+
+  position: absolute;
+
+  right: -70px;
+  top: 50%;
+
+  width: 330px;
+  height: 330px;
+
+  background:
+    url('./assets/insaec/puzzle-decorativo-4.svg')
+    center / contain no-repeat;
+
+  opacity: 0.10;
+
+  transform: translateY(-50%) rotate(-10deg);
+
+  pointer-events: none;
+}
+
+.vida-escolar-learning-inner {
+  position: relative;
+
+  z-index: 1;
+
+  width: min(100%, var(--container));
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.1fr);
+
+  gap: 90px;
+
+  align-items: center;
+}
+
+.vida-escolar-learning-copy {
+  position: relative;
+
+  z-index: 2;
+}
+
+.vida-escolar-learning-copy .eyebrow {
+  position: relative;
+
+  margin: 0 0 18px;
+
+  color: var(--insaec-blue);
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.vida-escolar-learning-copy h2 {
+  position: relative;
+
+  max-width: 560px;
+
+  margin: 0 0 28px;
+
+  color: var(--insaec-blue);
+
+  font-size: clamp(
+    3rem,
+    4.5vw,
+    4.5rem
+  );
+
+  font-weight: 800;
+
+  letter-spacing: -0.045em;
+
+  line-height: 1.02;
+}
+
+.vida-escolar-learning-copy p:not(.eyebrow) {
+  max-width: 570px;
+
+  margin: 0 0 20px;
+
+  color: var(--text-soft);
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+.vida-escolar-learning-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.vida-escolar-learning-visual {
+  position: relative;
+
+  min-height: 500px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+}
+
+.vida-escolar-learning-photo {
+  position: relative;
+
+  width: 90%;
+
+  overflow: hidden;
+
+  border-radius: 34px;
+
+  box-shadow:
+    0 22px 55px rgba(23, 54, 93, 0.12);
+}
+
+.vida-escolar-learning-photo img {
+  display: block;
+
+  width: 100%;
+  height: 500px;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 0.6s ease;
+}
+
+.vida-escolar-learning-photo:hover img {
+  transform: scale(1.025);
+}
+/* =========================================================
+   CONTENIDO PÁGINAS INTERNAS
+========================================================= */
+
+.inner-page-content {
+  background: #ffffff;
+
+  padding: 90px 20px 120px;
+}
+
+.inner-page-content-wrapper {
+  width: min(100%, 850px);
+
+  margin: 0 auto;
+}
+
+.inner-page-content .eyebrow {
+  margin: 0 0 16px;
+
+  color: var(--insaec-blue);
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.inner-page-content h2 {
+  margin: 0 0 28px;
+
+  color: var(--insaec-blue);
+
+  font-size: clamp(
+    2.2rem,
+    4vw,
+    4rem
+  );
+
+  line-height: 1.05;
+
+  letter-spacing: -0.035em;
+}
+
+.inner-page-content p:not(.eyebrow) {
+  margin: 0;
+
+  color: var(--text-soft);
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   INTRO HOME
+========================================================= */
+
+/* =========================================================
+   HOME — SECCIÓN 02
+   UNA EDUCACIÓN QUE ACOMPAÑA
+========================================================= */
+
+.intro-section {
+  position: relative;
+  padding: 150px 20px 160px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.intro-content,
+.intro-visual {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.intro-content {
+  transform: translateX(-70px);
+}
+
+.intro-visual {
+  transform: translateX(70px) scale(0.96);
+}
+
+.intro-section.is-visible .intro-content {
+  animation: introTextReveal 850ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.intro-section.is-visible .intro-visual {
+  animation: introPhotoReveal 950ms 100ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.intro-layout {
+  width: min(100%, var(--container));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(500px, 1.1fr);
+  align-items: center;
+  gap: 80px;
+}
+
+.intro-content {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.intro-eyebrow {
+  margin: 0 0 26px;
+  color: var(--insaec-cyan);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+}
+
+.intro-title {
+  margin: 0;
+  color: var(--insaec-blue);
+  font-size: clamp(3rem, 4.5vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+.intro-lead {
+  max-width: 570px;
+  margin: 34px 0 0;
+  color: var(--text-soft);
+  font-size: 1.18rem;
+  line-height: 1.7;
+}
+
+.intro-visual {
+  width: min(100%, 620px);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+
+  -webkit-mask-image: url('./assets/insaec/composicion-4-piezas1.svg');
+  mask-image: url('./assets/insaec/composicion-4-piezas1.svg');
+
+  -webkit-mask-size: contain;
+  mask-size: contain;
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.intro-photo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+
+  /*
+    El encuadre se ajustará después de ver
+    nuevamente la fotografía en pantalla.
+  */
+  object-position: 40% 50%;
+}
+/* =========================================================
+   MENÚ MÓVIL
+========================================================= */
+
+.mobile-menu-button {
+  display: none;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .site-header {
+    gap: 20px;
+  }
+
+  .main-nav {
+    gap: 16px;
+  }
+
+  .hero-visual {
+    width: 58%;
+  }
+
+  .hero-decoration-top {
+    width: 150px;
+  }
+
+  .hero-decoration-bottom {
+    width: 190px;
+  }
+}
+
+/* =========================================================
+   TABLET PEQUEÑO
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .site-header {
+    width: calc(100% - 32px);
+
+    min-height: 72px;
+
+    padding: 14px 0;
+
+    gap: 0;
+
+    justify-content: space-between;
+  }
+
+  .brand-name {
+    font-size: 1.35rem;
+  }
+
+  .brand-description {
+    margin-top: 4px;
+
+    font-size: 0.58rem;
+  }
+
+  /* Menú */
+
+  .mobile-menu-button {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 10px;
+
+    color: var(--insaec-blue);
+    background: #f3f6f9;
+
+    font-size: 1.35rem;
+
+    cursor: pointer;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .main-nav.main-nav-open {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    display: flex;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+
+    margin: 0;
+
+    padding: 10px 0 14px;
+
+    background: #ffffff;
+
+    border-top: 1px solid var(--border);
+
+    box-shadow:
+      0 14px 28px rgba(23, 54, 93, 0.12);
+  }
+
+  .main-nav.main-nav-open a {
+    display: block;
+
+    padding: 14px 20px;
+
+    font-size: 0.95rem;
+
+    border-radius: 0;
+  }
+
+  .main-nav.main-nav-open a:hover {
+    background: #f5f8fa;
+  }
+
+  .header-contact-button {
+    display: none;
+  }
+
+  /* HOME HERO */
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-content {
+    width: min(100% - 32px, var(--container));
+
+    min-height: 760px;
+
+    padding: 70px 0 430px;
+  }
+
+  .hero h1 {
+    width: min(620px, 100%);
+
+    max-width: 620px;
+  }
+
+  .hero-text {
+    width: min(540px, 100%);
+  }
+
+  .hero-visual {
+    top: auto;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 58%;
+  }
+
+  .hero-divider {
+    width: 32%;
+  }
+
+  .hero-decoration-top {
+    width: 135px;
+
+    left: auto;
+    right: 12%;
+
+    top: 25px;
+  }
+
+  .hero-decoration-bottom {
+    width: 170px;
+
+    right: -25px;
+    bottom: 20px;
+  }
+
+  /* HERO INTERNO */
+
+  .inner-hero {
+    height: 300px;
+  }
+
+  .inner-hero-content {
+    width: min(100% - 32px, var(--container));
+  }
+
+  .inner-hero-puzzle {
+    width: 145px;
+
+    right: 5%;
+    bottom: -40px;
+  }
+}
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .site-header {
+    width: calc(100% - 28px);
+
+    min-height: 72px;
+
+    padding: 14px 0;
+  }
+
+  .brand-name {
+    font-size: 1.4rem;
+  }
+
+  .brand-description {
+    font-size: 0.58rem;
+  }
+
+  /* HOME HERO */
+
+  .hero-content {
+    width: calc(100% - 28px);
+
+    min-height: 720px;
+
+    padding: 55px 0 390px;
+  }
+
+  .hero .eyebrow {
+    margin-bottom: 18px;
+
+    font-size: 0.68rem;
+  }
+
+  .hero h1 {
+    width: 100%;
+
+    font-size: clamp(
+      3rem,
+      15vw,
+      4.5rem
+    );
+
+    line-height: 0.92;
+  }
+
+  .hero-text {
+    width: 100%;
+
+    margin-top: 24px;
+
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+
+    width: 100%;
+
+    margin-top: 28px;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
+
+  .hero-visual {
+    height: 52%;
+  }
+
+  .hero-divider {
+    width: 38%;
+  }
+
+  .hero-decoration-top {
+    width: 105px;
+
+    right: 12%;
+    top: 15px;
+  }
+
+  .hero-decoration-bottom {
+    width: 125px;
+
+    right: -22px;
+    bottom: 12px;
+  }
+
+  .hero-bottom-message {
+    left: 0;
+    bottom: 22px;
+
+    gap: 12px;
+  }
+
+  .hero-bottom-message img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .hero-bottom-line {
+    height: 38px;
+  }
+
+  .hero-bottom-message p {
+    font-size: 0.82rem;
+  }
+
+  /* HERO INTERNO */
+
+  .inner-hero {
+    height: 250px;
+  }
+
+  .inner-hero-image {
+    object-position: center center;
+  }
+
+  .inner-hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(10, 25, 45, 0.82) 0%,
+        rgba(10, 25, 45, 0.55) 65%,
+        rgba(10, 25, 45, 0.3) 100%
+      );
+  }
+
+  .inner-hero-content {
+    width: calc(100% - 28px);
+  }
+
+  .inner-hero-eyebrow {
+    margin-bottom: 10px;
+
+    font-size: 0.62rem;
+    letter-spacing: 0.13em;
+  }
+
+  .inner-hero-content h1 {
+    max-width: 75%;
+
+    font-size: clamp(
+      2.3rem,
+      10vw,
+      3.4rem
+    );
+
+    line-height: 0.96;
+  }
+
+  .inner-hero-puzzle {
+    width: 105px;
+
+    right: -18px;
+    bottom: -25px;
+
+    transform: rotate(-8deg);
+  }
+
+  /* CONTENIDO INTERNO */
+
+  .inner-page-content {
+    padding: 70px 14px 90px;
+  }
+
+  .inner-page-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .inner-page-content p:not(.eyebrow) {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* INTRO */
+
+  .intro-section {
+    padding: 80px 14px 90px;
+  }
+    .intro-layout {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+  @media (max-width: 767px) {
+
+  .intro-section::before,
+  .intro-section::after,
+  .intro-section .intro-layout::before,
+  .intro-section .intro-layout::after {
+    display: none;
+  }
+
+}
+
+  .intro-content h2 {
+    font-size: 2.2rem;
+  }
+}
+/* Piezas decorativas de la sección */
+
+.intro-section::before {
+  content: "";
+  position: absolute;
+  top: 18%;
+  left: 47%;
+  width: 72px;
+  height: 72px;
+  background: url('./assets/insaec/puzzle-decorativo-1.svg')
+    center / contain no-repeat;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.intro-section::after {
+  content: "";
+  position: absolute;
+  right: 39%;
+  bottom: 15%;
+  width: 58px;
+  height: 58px;
+  background: url('./assets/insaec/puzzle-decorativo-3.svg')
+    center / contain no-repeat;
+  opacity: 0.75;
+  pointer-events: none;
+}
+.intro-section .intro-layout::before {
+  content: "";
+  position: absolute;
+  top: 8%;
+  left: 41%;
+  width: 125px;
+  height: 125px;
+  background: url('./assets/insaec/puzzle-decorativo-2.svg')
+    center / contain no-repeat;
+  opacity: 0.14;
+  pointer-events: none;
+}
+
+.intro-section .intro-layout::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  bottom: 5%;
+  width: 140px;
+  height: 140px;
+  background: url('./assets/insaec/puzzle-decorativo-4.svg')
+    center / contain no-repeat;
+  opacity: 0.12;
+  pointer-events: none;
+}
+/* =========================================================
+   MÓVIL MUY PEQUEÑO
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .hero-content {
+    min-height: 700px;
+
+    padding-bottom: 370px;
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-text {
+    font-size: 0.95rem;
+  }
+
+  .hero-decoration-top {
+    width: 90px;
+  }
+
+  .hero-decoration-bottom {
+    width: 110px;
+  }
+
+  .inner-hero {
+    height: 230px;
+  }
+
+  .inner-hero-content h1 {
+    font-size: 2.15rem;
+  }
+
+  .inner-hero-puzzle {
+    width: 90px;
+  }
+}
+/* =========================================================
+   HERO PRINCIPAL — RESPONSIVE MÓVIL
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  /* -------------------------------------------------------
+     HERO
+     ------------------------------------------------------- */
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  /* -------------------------------------------------------
+     BLOQUE AZUL
+     ------------------------------------------------------- */
+
+  .hero-content {
+    position: relative;
+    width: 100%;
+    min-height: 0;
+    padding: 58px 20px 34px;
+    box-sizing: border-box;
+    z-index: 5;
+  }
+
+  /* -------------------------------------------------------
+     EYEBROW
+     ------------------------------------------------------- */
+
+  .hero-content .eyebrow {
+    margin: 0 0 18px;
+    font-size: 0.68rem;
+    line-height: 1.4;
+  }
+
+  /* -------------------------------------------------------
+     TÍTULO
+     ------------------------------------------------------- */
+
+  .hero-content h1 {
+    max-width: 100%;
+    margin: 0 0 22px;
+    font-size: clamp(2.55rem, 11.5vw, 3.5rem);
+    line-height: 0.96;
+    letter-spacing: -0.045em;
+  }
+
+  /* -------------------------------------------------------
+     TEXTO
+     ------------------------------------------------------- */
+
+  .hero-text {
+    max-width: 100%;
+    margin: 0 0 28px;
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+
+  /* -------------------------------------------------------
+     BOTONES
+     ------------------------------------------------------- */
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    margin: 0;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+    min-height: 52px;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* -------------------------------------------------------
+     MENSAJE "CADA PIEZA CUENTA"
+     
+     IMPORTANTE:
+     En móvil debe formar parte del flujo normal.
+     No debe estar en position:absolute.
+     ------------------------------------------------------- */
+
+  .hero-bottom-message {
+    position: static;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 34px 0 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .hero-bottom-message img {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 auto;
+    object-fit: contain;
+  }
+
+  .hero-bottom-line {
+    display: block;
+    width: 1px;
+    height: 38px;
+    margin: 0 14px;
+    flex: 0 0 auto;
+  }
+
+  .hero-bottom-message p {
+    margin: 0;
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+
+  /* -------------------------------------------------------
+     ÁREA FOTOGRÁFICA
+     ------------------------------------------------------- */
+
+  .hero-visual {
+    position: relative;
+    width: 100%;
+    height: 360px;
+    min-height: 360px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  /* -------------------------------------------------------
+     FOTOGRAFÍA
+     ------------------------------------------------------- */
+
+  .hero-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  /* -------------------------------------------------------
+     DIVISOR ORGÁNICO
+     
+     La forma orgánica pertenece a la composición desktop.
+     En móvil dejamos una fotografía limpia.
+     ------------------------------------------------------- */
+
+  .hero-divider {
+    display: none;
+  }
+
+  /* -------------------------------------------------------
+     PIEZAS DECORATIVAS
+     ------------------------------------------------------- */
+
+  .hero-decoration {
+    position: absolute;
+    z-index: 3;
+    height: auto;
+  }
+
+  .hero-decoration-top {
+    width: 76px;
+    top: 18px;
+    right: 16px;
+  }
+
+  .hero-decoration-bottom {
+    width: 105px;
+    right: -18px;
+    bottom: 14px;
+  }
+}
+/* =========================================================
+   HERO PRINCIPAL — AJUSTE DE POSICIÓN EN ESCRITORIO
+   ========================================================= */
+
+@media (min-width: 768px) {
+  .hero-content {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: clamp(80px, 10vw, 160px);
+    padding-right: 40px;
+  }
+}
+/* =========================================================
+   HERO - ESCRITORIO CON POCA ALTURA
+========================================================= */
+
+@media (min-width: 768px) and (max-height: 850px) {
+  .hero-content {
+    padding-top: 45px;
+    padding-bottom: 70px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.2rem, 5.2vw, 5.4rem);
+  }
+
+  .hero-text {
+    margin-top: 24px;
+  }
+
+  .hero-actions {
+    margin-top: 26px;
+  }
+
+  .hero-bottom-message {
+    bottom: 24px;
+  }
+}
+/* =========================================================
+   HOME — SECCIÓN 03
+   APRENDER HACIENDO
+========================================================= */
+
+.learning-section {
+  position: relative;
+  overflow: hidden;
+  padding: 150px 20px 160px;
+  background: var(--insaec-blue);
+  color: #ffffff;
+}
+
+.learning-section-header {
+  opacity: 0;
+  transform: translateY(45px);
+  will-change: transform, opacity;
+}
+
+.learning-card {
+  opacity: 0;
+  transform: translateY(55px);
+  will-change: transform, opacity;
+}
+
+.learning-section.is-visible .learning-section-header {
+  animation: learningHeaderReveal 800ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.learning-section.is-visible .learning-card:nth-child(1) {
+  animation: learningCardReveal 700ms 140ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.learning-section.is-visible .learning-card:nth-child(2) {
+  animation: learningCardReveal 700ms 260ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.learning-section.is-visible .learning-card:nth-child(3) {
+  animation: learningCardReveal 700ms 380ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.learning-section.is-visible .learning-card:nth-child(4) {
+  animation: learningCardReveal 700ms 500ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.learning-section.is-visible::before {
+  animation: puzzleFloat 5s ease-in-out 900ms infinite;
+}
+
+.learning-section.is-visible::after {
+  animation: puzzleFloatReverse 6s ease-in-out 1100ms infinite;
+}
+
+.learning-section-inner {
+  width: min(100%, var(--container));
+  margin: 0 auto;
+}
+
+.learning-section-header {
+  max-width: 850px;
+  margin-bottom: 85px;
+}
+
+.learning-eyebrow {
+  margin: 0 0 24px;
+  color: var(--insaec-cyan);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+}
+
+.learning-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(3.2rem, 5vw, 5.4rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 0.98;
+}
+
+.learning-intro {
+  max-width: 650px;
+  margin: 30px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.learning-card {
+  position: relative;
+  min-height: 280px;
+  padding: 38px 32px 20px 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.learning-card:not(:first-child) {
+  padding-left: 32px;
+}
+
+.learning-card:last-child {
+  border-right: none;
+}
+
+.learning-number {
+  display: block;
+  margin-bottom: 28px;
+  color: var(--insaec-cyan);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.learning-card h3 {
+  margin: 0 0 16px;
+  color: #ffffff;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.learning-card p {
+  max-width: 250px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+/* Piezas decorativas */
+
+.learning-section::before {
+  content: "";
+  position: absolute;
+  top: 7%;
+  right: 8%;
+  width: 150px;
+  height: 150px;
+  background: url('./assets/insaec/puzzle-decorativo-2.svg')
+    center / contain no-repeat;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.learning-section::after {
+  content: "";
+  position: absolute;
+  right: 38%;
+  bottom: 5%;
+  width: 95px;
+  height: 95px;
+  background: url('./assets/insaec/puzzle-decorativo-4.svg')
+    center / contain no-repeat;
+  opacity: 0.14;
+  pointer-events: none;
+}
+@keyframes introTextReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes introPhotoReveal {
+  from {
+    opacity: 0;
+    transform: translateX(70px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes learningHeaderReveal {
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes learningCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(55px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes puzzleFloat {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate3d(0, -12px, 0) rotate(3deg);
+  }
+}
+
+@keyframes puzzleFloatReverse {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate3d(0, 10px, 0) rotate(-3deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-content,
+  .intro-visual,
+  .learning-section-header,
+  .learning-card {
+    opacity: 1;
+    transform: none;
+    animation: none !important;
+  }
+
+  .learning-section::before,
+  .learning-section::after {
+    animation: none !important;
+  }
+}
+
+/* =========================================================
+   ANIMACIONES — AJUSTE MÓVIL
+========================================================= */
+
+@media (max-width: 767px) {
+  .intro-content {
+    transform: translateY(35px);
+  }
+
+  .intro-visual {
+    transform: translateY(35px) scale(0.97);
+  }
+
+  .intro-section.is-visible .intro-content {
+    animation-name: introMobileTextReveal;
+  }
+
+  .intro-section.is-visible .intro-visual {
+    animation-name: introMobilePhotoReveal;
+  }
+
+  .learning-card {
+    transform: translateY(35px);
+  }
+}
+
+@keyframes introMobileTextReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes introMobilePhotoReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================================
+   INSAEC — SECCIÓN 04
+   NUESTRA PROPUESTA EDUCATIVA
+========================================================= */
+
+.proposal-section {
+  position: relative;
+  overflow: hidden;
+  padding: 150px 20px 160px;
+  background: #ffffff;
+}
+
+.proposal-section-inner {
+  width: min(100%, var(--container));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(460px, 1.08fr);
+  align-items: center;
+  gap: 90px;
+}
+
+.proposal-copy {
+  width: 100%;
+  max-width: 650px;
+}
+
+.proposal-eyebrow {
+  margin: 0 0 22px;
+  color: var(--insaec-cyan);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  line-height: 1.3;
+}
+
+.proposal-title {
+  margin: 0;
+  color: var(--insaec-blue);
+  font-size: clamp(3rem, 4.6vw, 5.2rem);
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.proposal-intro {
+  max-width: 610px;
+  margin: 30px 0 0;
+  color: var(--text-soft);
+  font-size: 1.12rem;
+  line-height: 1.7;
+}
+
+.proposal-levels {
+  margin-top: 54px;
+  border-top: 1px solid var(--border);
+}
+
+.proposal-level {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 22px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.proposal-level-number {
+  color: var(--insaec-cyan);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  padding-top: 5px;
+}
+
+.proposal-level h3 {
+  margin: 0 0 9px;
+  color: var(--insaec-blue);
+  font-size: 1.35rem;
+  line-height: 1.15;
+}
+
+.proposal-level p {
+  max-width: 510px;
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.proposal-visual {
+  position: relative;
+  width: min(100%, 620px);
+  min-height: 640px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.proposal-photo-frame {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 570px);
+  aspect-ratio: 0.88;
+  overflow: hidden;
+  -webkit-mask-image: url('./assets/insaec/composicion-4-piezas1.svg');
+  mask-image: url('./assets/insaec/composicion-4-piezas1.svg');
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.proposal-photo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.proposal-decoration {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.proposal-decoration-top {
+  top: 2%;
+  right: 4%;
+  width: 125px;
+  opacity: 0.8;
+}
+
+.proposal-decoration-bottom {
+  bottom: 1%;
+  left: 3%;
+  width: 150px;
+  opacity: 0.72;
+}
+
+.proposal-decoration-side {
+  top: 43%;
+  left: -1%;
+  width: 82px;
+  opacity: 0.8;
+}
+
+/* Entrada editorial de la sección 04 */
+
+.proposal-copy,
+.proposal-visual {
+  opacity: 0;
+  transition:
+    opacity 950ms ease,
+    transform 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.proposal-copy {
+  transform: translateX(-75px);
+}
+
+.proposal-visual {
+  transform: translateX(75px) scale(0.97);
+  transition-delay: 120ms;
+}
+
+.proposal-section.is-visible .proposal-copy,
+.proposal-section.is-visible .proposal-visual {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+.proposal-level {
+  transition:
+    transform 400ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 350ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .proposal-level:hover {
+    transform: translateX(8px);
+    background-color: #f7f9fb;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .proposal-copy,
+  .proposal-visual {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .proposal-section {
+    padding: 90px 20px 105px;
+  }
+
+  .proposal-section-inner {
+    grid-template-columns: 1fr;
+    gap: 58px;
+  }
+
+  .proposal-copy {
+    max-width: 680px;
+  }
+
+  .proposal-eyebrow {
+    font-size: 0.72rem;
+    margin-bottom: 18px;
+  }
+
+  .proposal-title {
+    font-size: clamp(2.8rem, 12vw, 4.2rem);
+    line-height: 0.98;
+  }
+
+  .proposal-intro {
+    margin-top: 26px;
+    font-size: 1.05rem;
+    line-height: 1.65;
+  }
+
+  .proposal-levels {
+    margin-top: 42px;
+  }
+
+  .proposal-level {
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 14px;
+    padding: 24px 0;
+  }
+
+  .proposal-level h3 {
+    font-size: 1.2rem;
+  }
+
+  .proposal-level p {
+    font-size: 0.96rem;
+    line-height: 1.6;
+  }
+
+  .proposal-visual {
+    width: 100%;
+    min-height: 430px;
+  }
+
+  .proposal-photo-frame {
+    width: min(100%, 430px);
+  }
+
+  .proposal-decoration-top {
+    top: 0;
+    right: 2%;
+    width: 85px;
+  }
+
+  .proposal-decoration-bottom {
+    bottom: 0;
+    left: 1%;
+    width: 105px;
+  }
+
+  .proposal-decoration-side {
+    top: 42%;
+    left: -3%;
+    width: 62px;
+  }
+
+  .proposal-copy,
+  .proposal-visual {
+    transform: translateY(45px);
+  }
+
+  .proposal-section.is-visible .proposal-copy,
+  .proposal-section.is-visible .proposal-visual {
+    transform: translateY(0);
+  }
+}
+/* =========================================================
+   INSAEC — RECUPERACIÓN DE ANIMACIONES
+   SECCIÓN 03 + BOTONES HERO
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   SECCIÓN 03 — ENTRADA DE TARJETAS
+--------------------------------------------------------- */
+
+.learning-card {
+  opacity: 0;
+  transform: translateY(70px);
+
+  transition:
+    opacity 900ms ease,
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.learning-section.is-visible .learning-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.learning-section.is-visible .learning-card:nth-child(1) {
+  transition-delay: 100ms;
+}
+
+.learning-section.is-visible .learning-card:nth-child(2) {
+  transition-delay: 250ms;
+}
+
+.learning-section.is-visible .learning-card:nth-child(3) {
+  transition-delay: 400ms;
+}
+
+.learning-section.is-visible .learning-card:nth-child(4) {
+  transition-delay: 550ms;
+}
+
+
+/* ---------------------------------------------------------
+   SECCIÓN 03 — HOVER
+--------------------------------------------------------- */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .learning-card {
+    transition:
+      opacity 900ms ease,
+      transform 450ms cubic-bezier(0.22, 1, 0.36, 1),
+      background-color 450ms ease;
+  }
+
+  .learning-card:hover {
+    transform: translateY(-12px);
+    background-color: rgba(255, 255, 255, 0.055);
+  }
+
+  .learning-card .learning-number {
+    transition:
+      transform 450ms cubic-bezier(0.22, 1, 0.36, 1),
+      letter-spacing 450ms ease;
+  }
+
+  .learning-card:hover .learning-number {
+    transform: translateX(6px);
+    letter-spacing: 0.14em;
+  }
+
+  .learning-card .learning-icon {
+    transition:
+      transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .learning-card:hover .learning-icon {
+    transform: translateY(-5px) scale(1.08) rotate(-3deg);
+  }
+
+  .learning-card h3 {
+    transition:
+      transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .learning-card:hover h3 {
+    transform: translateX(5px);
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   HERO — COLORES E INTERACCIÓN DE BOTONES
+--------------------------------------------------------- */
+
+.hero-actions a {
+  transition:
+    transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 350ms ease,
+    color 350ms ease,
+    border-color 350ms ease,
+    box-shadow 350ms ease;
+}
+
+
+/* BOTÓN PRINCIPAL */
+
+.hero-actions a:first-child {
+  background-color: var(--insaec-cyan);
+  color: #ffffff;
+  border-color: var(--insaec-cyan);
+}
+
+.hero-actions a:first-child:hover {
+  background-color: var(--insaec-yellow);
+  border-color: var(--insaec-yellow);
+  color: var(--insaec-blue);
+
+  transform: translateY(-5px) scale(1.025);
+
+  box-shadow:
+    0 12px 28px rgba(23, 54, 93, 0.25);
+}
+
+
+/* BOTÓN SECUNDARIO */
+
+.hero-actions a:last-child {
+  background-color: #ffffff;
+  color: var(--insaec-blue);
+  border-color: #ffffff;
+}
+
+.hero-actions a:last-child:hover {
+  background-color: var(--insaec-blue);
+  border-color: var(--insaec-blue);
+  color: #ffffff;
+
+  transform: translateY(-5px) scale(1.025);
+
+  box-shadow:
+    0 10px 24px rgba(23, 54, 93, 0.25);
+}
+
+
+/* ---------------------------------------------------------
+   MÓVIL — ENTRADA DE LAS TARJETAS
+--------------------------------------------------------- */
+
+@media (max-width: 767px) {
+    .learning-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .learning-section.is-visible .learning-card:nth-child(1) {
+    transition-delay: 100ms;
+  }
+
+  .learning-section.is-visible .learning-card:nth-child(2) {
+    transition-delay: 250ms;
+  }
+
+  .learning-section.is-visible .learning-card:nth-child(3) {
+    transition-delay: 400ms;
+  }
+
+  .learning-section.is-visible .learning-card:nth-child(4) {
+    transition-delay: 550ms;
+  }
+
+  .learning-card:active {
+    transform: translateY(-5px);
+  }
+
+}
+/* =========================================================
+   INSAEC — SECCIÓN 05
+   NUESTRA FILOSOFÍA
+========================================================= */
+
+.philosophy-section {
+  position: relative;
+  overflow: hidden;
+
+  background: var(--insaec-blue);
+  color: #ffffff;
+
+  padding: 120px 6vw 130px;
+}
+
+.philosophy-section-inner {
+  position: relative;
+
+  width: min(1180px, 100%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 80px;
+}
+
+/* =========================================================
+   TEXTO
+========================================================= */
+
+.philosophy-copy {
+  position: relative;
+  z-index: 3;
+
+  max-width: 590px;
+
+  opacity: 0;
+  transform: translateX(-55px);
+
+  transition:
+    opacity 900ms ease,
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.philosophy-section.is-visible .philosophy-copy {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.philosophy-eyebrow {
+  margin: 0 0 18px;
+
+  color: var(--insaec-cyan);
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.philosophy-title {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(3rem, 5vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.philosophy-intro {
+  max-width: 540px;
+
+  margin: 32px 0 0;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.philosophy-closing {
+  margin-top: 42px;
+  padding-left: 22px;
+
+  border-left: 2px solid var(--insaec-yellow);
+}
+
+.philosophy-closing-lead {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.philosophy-closing-text {
+  margin: 8px 0 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   ÁREA DE ROMPECABEZAS
+========================================================= */
+
+.philosophy-visual {
+  position: relative;
+
+  min-height: 500px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.philosophy-puzzle-main {
+  position: relative;
+  z-index: 2;
+
+  width: 330px;
+  aspect-ratio: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--insaec-yellow);
+
+  clip-path: polygon(
+    0 0,
+    42% 0,
+    42% 8%,
+    50% 13%,
+    58% 8%,
+    58% 0,
+    100% 0,
+    100% 42%,
+    92% 42%,
+    87% 50%,
+    92% 58%,
+    100% 58%,
+    100% 100%,
+    58% 100%,
+    58% 92%,
+    50% 87%,
+    42% 92%,
+    42% 100%,
+    0 100%,
+    0 58%,
+    8% 58%,
+    13% 50%,
+    8% 42%,
+    0 42%
+  );
+
+  opacity: 0;
+  transform: scale(0.82) rotate(-5deg);
+
+  transition:
+    opacity 900ms 250ms ease,
+    transform 1000ms 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.philosophy-section.is-visible .philosophy-puzzle-main {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+}
+
+.philosophy-puzzle-number {
+  color: var(--insaec-blue);
+
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.philosophy-puzzle-word {
+  margin-top: 12px;
+
+  color: var(--insaec-blue);
+
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   PIEZAS DECORATIVAS
+========================================================= */
+
+.philosophy-decoration {
+  position: absolute;
+
+  width: 125px;
+  height: auto;
+
+  pointer-events: none;
+
+  opacity: 0;
+  transition:
+    opacity 700ms ease,
+    transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.philosophy-decoration-top {
+  top: 28px;
+  left: 8%;
+
+  transform: translateY(-35px) rotate(-10deg);
+}
+
+.philosophy-decoration-right {
+  right: 0;
+  top: 30%;
+
+  transform: translateX(35px) rotate(8deg);
+}
+
+.philosophy-decoration-bottom {
+  left: 10%;
+  bottom: 20px;
+
+  transform: translateY(35px) rotate(6deg);
+}
+
+.philosophy-section.is-visible .philosophy-decoration-top {
+  opacity: 0.9;
+  transform: translateY(0) rotate(-10deg);
+  transition-delay: 500ms;
+}
+
+.philosophy-section.is-visible .philosophy-decoration-right {
+  opacity: 0.85;
+  transform: translateX(0) rotate(8deg);
+  transition-delay: 700ms;
+}
+
+.philosophy-section.is-visible .philosophy-decoration-bottom {
+  opacity: 0.8;
+  transform: translateY(0) rotate(6deg);
+  transition-delay: 900ms;
+}
+
+
+/* =========================================================
+   INTERACCIÓN DE LA PIEZA PRINCIPAL
+========================================================= */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .philosophy-puzzle-main {
+    transition:
+      opacity 900ms 250ms ease,
+      transform 1000ms 250ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .philosophy-section.is-visible .philosophy-puzzle-main:hover {
+    transform: scale(1.035) rotate(1deg);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .philosophy-section {
+    padding: 100px 6vw 110px;
+  }
+
+  .philosophy-section-inner {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .philosophy-copy {
+    max-width: 680px;
+  }
+
+  .philosophy-visual {
+    min-height: 430px;
+  }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .philosophy-section {
+    padding: 80px 20px 90px;
+  }
+
+  .philosophy-section-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .philosophy-copy {
+    width: 100%;
+  }
+
+  .philosophy-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+  }
+
+  .philosophy-title {
+    font-size: clamp(2.55rem, 12vw, 4rem);
+    line-height: 1;
+  }
+
+  .philosophy-intro {
+    margin-top: 24px;
+
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .philosophy-closing {
+    margin-top: 32px;
+    padding-left: 16px;
+  }
+
+  .philosophy-closing-lead {
+    font-size: 1.02rem;
+  }
+
+  .philosophy-closing-text {
+    font-size: 0.92rem;
+  }
+
+  .philosophy-visual {
+    width: 100%;
+    min-height: 350px;
+  }
+
+  .philosophy-puzzle-main {
+    width: min(270px, 75vw);
+  }
+
+  .philosophy-puzzle-word {
+    font-size: 1.6rem;
+  }
+
+  .philosophy-decoration {
+    width: 90px;
+  }
+
+  .philosophy-decoration-top {
+    top: 0;
+    left: 2%;
+  }
+
+  .philosophy-decoration-right {
+    right: -5px;
+    top: 35%;
+  }
+
+  .philosophy-decoration-bottom {
+    left: 4%;
+    bottom: 0;
+  }
+
+}
+/* =========================================================
+   INSAEC — SECCIÓN 05
+   POSICIÓN DE LAS 4 PIEZAS DECORATIVAS
+========================================================= */
+
+.philosophy-visual {
+  position: relative;
+  min-height: 500px;
+}
+
+.philosophy-decoration {
+  position: absolute;
+  width: 145px;
+  height: auto;
+
+  pointer-events: none;
+
+  opacity: 0;
+  transition:
+    opacity 800ms ease,
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* PIEZA 1 */
+
+.philosophy-decoration-one {
+  top: 4%;
+  left: 12%;
+
+  transform: translateY(-35px) rotate(-10deg);
+}
+
+
+/* PIEZA 2 */
+
+.philosophy-decoration-two {
+  top: 24%;
+  right: 2%;
+
+  transform: translateX(35px) rotate(8deg);
+}
+
+
+/* PIEZA 3 */
+
+.philosophy-decoration-three {
+  bottom: 10%;
+  left: 8%;
+
+  transform: translateY(35px) rotate(5deg);
+}
+
+
+/* PIEZA 4 */
+
+.philosophy-decoration-four {
+  bottom: 4%;
+  right: 18%;
+
+  transform: translateY(35px) rotate(-7deg);
+}
+
+
+/* =========================================================
+   ANIMACIÓN DE ENTRADA
+========================================================= */
+
+.philosophy-section.is-visible .philosophy-decoration-one {
+  opacity: 1;
+  transform: translateY(0) rotate(-10deg);
+  transition-delay: 250ms;
+}
+
+.philosophy-section.is-visible .philosophy-decoration-two {
+  opacity: 1;
+  transform: translateX(0) rotate(8deg);
+  transition-delay: 450ms;
+}
+
+.philosophy-section.is-visible .philosophy-decoration-three {
+  opacity: 1;
+  transform: translateY(0) rotate(5deg);
+  transition-delay: 650ms;
+}
+
+.philosophy-section.is-visible .philosophy-decoration-four {
+  opacity: 1;
+  transform: translateY(0) rotate(-7deg);
+  transition-delay: 850ms;
+}
+
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .philosophy-visual {
+    min-height: 390px;
+    width: 100%;
+  }
+
+  .philosophy-decoration {
+    width: 95px;
+  }
+
+  .philosophy-decoration-one {
+    top: 2%;
+    left: 5%;
+  }
+
+  .philosophy-decoration-two {
+    top: 20%;
+    right: 2%;
+  }
+
+  .philosophy-decoration-three {
+    bottom: 8%;
+    left: 5%;
+  }
+
+  .philosophy-decoration-four {
+    bottom: 2%;
+    right: 12%;
+  }
+
+}
+/* =========================================================
+   INSAEC — MOVIMIENTO PERMANENTE
+   SECCIÓN 05 — PIEZAS DECORATIVAS
+========================================================= */
+
+.philosophy-section.is-visible .philosophy-decoration-one {
+  animation: philosophyFloatOne 5.5s ease-in-out infinite;
+}
+
+.philosophy-section.is-visible .philosophy-decoration-two {
+  animation: philosophyFloatTwo 6.5s ease-in-out infinite;
+}
+
+.philosophy-section.is-visible .philosophy-decoration-three {
+  animation: philosophyFloatThree 5.8s ease-in-out infinite;
+}
+
+.philosophy-section.is-visible .philosophy-decoration-four {
+  animation: philosophyFloatFour 6.2s ease-in-out infinite;
+}
+
+
+/* PIEZA AZUL */
+
+@keyframes philosophyFloatOne {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(-10deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(-6deg);
+  }
+
+}
+
+
+/* PIEZA AMARILLA */
+
+@keyframes philosophyFloatTwo {
+
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(8deg);
+  }
+
+  50% {
+    transform: translate(8px, -9px) rotate(12deg);
+  }
+
+}
+
+
+/* PIEZA VERDE */
+
+@keyframes philosophyFloatThree {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(5deg);
+  }
+
+  50% {
+    transform: translate(-7px, -13px) rotate(1deg);
+  }
+
+}
+
+
+/* PIEZA CORAL */
+
+@keyframes philosophyFloatFour {
+
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(-7deg);
+  }
+
+  50% {
+    transform: translate(7px, -11px) rotate(-3deg);
+  }
+
+}
+/* =========================================================
+   INSAEC — SECCIÓN 06
+   UBICACIÓN Y CONTACTO
+========================================================= */
+
+.contact-section {
+  position: relative;
+  overflow: hidden;
+
+  background: #ffffff;
+  color: var(--insaec-blue);
+
+  padding: 120px 6vw 125px;
+}
+
+.contact-section-inner {
+  position: relative;
+
+  width: min(1180px, 100%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 90px;
+}
+
+
+/* =========================================================
+   CONTENIDO
+========================================================= */
+
+.contact-copy {
+  position: relative;
+  z-index: 3;
+
+  max-width: 570px;
+
+  opacity: 0;
+  transform: translateX(-45px);
+
+  transition:
+    opacity 850ms ease,
+    transform 850ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.contact-section.is-visible .contact-copy {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.contact-eyebrow {
+  margin: 0 0 18px;
+
+  color: var(--insaec-cyan);
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.contact-title {
+  margin: 0;
+
+  color: var(--insaec-blue);
+
+  font-size: clamp(3rem, 5vw, 4.8rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.contact-intro {
+  max-width: 520px;
+
+  margin: 30px 0 0;
+
+  color: #5d6875;
+
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   DATOS DE CONTACTO
+========================================================= */
+
+.contact-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+
+  margin-top: 42px;
+  padding-top: 28px;
+
+  border-top: 1px solid rgba(23, 54, 93, 0.14);
+}
+
+.contact-detail-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--insaec-blue);
+
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.contact-detail p {
+  margin: 0;
+
+  color: #5d6875;
+
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+.contact-detail a {
+  color: var(--insaec-blue);
+  text-decoration: none;
+
+  transition:
+    color 250ms ease,
+    opacity 250ms ease;
+}
+
+.contact-detail a:hover {
+  color: var(--insaec-cyan);
+}
+
+
+/* =========================================================
+   BOTONES
+========================================================= */
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  margin-top: 38px;
+}
+
+.contact-actions .button {
+  min-height: 50px;
+}
+
+
+/* =========================================================
+   ELEMENTO VISUAL
+========================================================= */
+
+.contact-visual {
+  position: relative;
+
+  min-height: 480px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-location-card {
+  position: relative;
+  z-index: 2;
+
+  width: min(390px, 100%);
+  min-height: 330px;
+
+  padding: 42px;
+
+  box-sizing: border-box;
+
+  background: var(--insaec-blue);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-radius: 4px;
+
+  box-shadow:
+    0 25px 55px rgba(23, 54, 93, 0.18);
+
+  opacity: 0;
+  transform: translateY(35px) rotate(1deg);
+
+  transition:
+    opacity 900ms 250ms ease,
+    transform 900ms 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.contact-section.is-visible .contact-location-card {
+  opacity: 1;
+  transform: translateY(0) rotate(1deg);
+}
+
+.contact-location-marker {
+  display: inline-flex;
+  align-self: flex-start;
+
+  padding: 8px 12px;
+
+  background: var(--insaec-yellow);
+  color: var(--insaec-blue);
+
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.contact-location-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  width: 100%;
+  margin: 25px 0;
+}
+
+.contact-location-lines span {
+  display: block;
+
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.contact-location-lines span:nth-child(2) {
+  width: 72%;
+}
+
+.contact-location-lines span:nth-child(3) {
+  width: 45%;
+}
+
+.contact-location-address strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.contact-location-address p {
+  margin: 16px 0 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   PIEZAS DECORATIVAS
+========================================================= */
+
+.contact-decoration {
+  position: absolute;
+
+  width: 105px;
+  height: auto;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  transition:
+    opacity 700ms ease,
+    transform 850ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.contact-decoration-one {
+
+  top: 7%;
+
+  left: -165%;
+
+  transform: translateY(-25px) rotate(-8deg);
+
+}
+
+.contact-decoration-two {
+
+  left: -165%;
+
+  right: auto;
+
+  bottom: 8%;
+
+  transform: translateY(25px) rotate(7deg);
+
+}
+
+.contact-section.is-visible .contact-decoration-one {
+  opacity: 1;
+  transform: translateY(0) rotate(-8deg);
+  transition-delay: 500ms;
+}
+
+.contact-section.is-visible .contact-decoration-two {
+  opacity: 1;
+  transform: translateY(0) rotate(7deg);
+  transition-delay: 700ms;
+}
+
+
+/* =========================================================
+   MOVIMIENTO SUTIL PERMANENTE
+========================================================= */
+
+.contact-section.is-visible .contact-decoration-one {
+  animation: contactFloatOne 5.8s ease-in-out 1.2s infinite;
+}
+
+.contact-section.is-visible .contact-decoration-two {
+  animation: contactFloatTwo 6.4s ease-in-out 1.4s infinite;
+}
+
+@keyframes contactFloatOne {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(-8deg);
+  }
+
+  50% {
+    transform: translateY(-9px) rotate(-4deg);
+  }
+}
+
+@keyframes contactFloatTwo {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(7deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(11deg);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .contact-section {
+    padding: 100px 6vw 110px;
+  }
+
+  .contact-section-inner {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .contact-copy {
+    max-width: 700px;
+  }
+
+  .contact-visual {
+    min-height: 430px;
+  }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .contact-section {
+    padding: 80px 20px 90px;
+  }
+
+  .contact-section-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .contact-title {
+    font-size: clamp(2.6rem, 12vw, 4rem);
+  }
+
+  .contact-intro {
+    margin-top: 24px;
+
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .contact-details {
+    grid-template-columns: 1fr;
+    gap: 25px;
+
+    margin-top: 34px;
+  }
+
+  .contact-actions {
+    flex-direction: column;
+
+    width: 100%;
+    margin-top: 32px;
+  }
+
+  .contact-actions .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contact-visual {
+    min-height: 370px;
+  }
+
+  .contact-location-card {
+    width: min(330px, 88vw);
+    min-height: 300px;
+
+    padding: 32px;
+  }
+
+  .contact-decoration {
+    width: 80px;
+  }
+
+  .contact-decoration-one {
+    top: 1%;
+    left: 0;
+  }
+
+  .contact-decoration-two {
+    right: 0;
+    bottom: 3%;
+  }
+
+}
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+  background: var(--insaec-blue);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.site-footer-inner {
+  width: min(1180px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 72px 0 64px;
+
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1.15fr 1.25fr;
+  gap: 56px;
+}
+
+.site-footer-brand {
+  padding-right: 20px;
+}
+
+.site-footer-logo {
+  display: inline-block;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.site-footer-tagline {
+  margin: 14px 0 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.site-footer-column h3 {
+  margin: 0 0 20px;
+
+  color: #ffffff;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.site-footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.site-footer-nav a,
+.site-footer-contact a,
+.site-footer-facebook {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+
+  font-size: 0.92rem;
+  line-height: 1.5;
+
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.site-footer-nav a:hover,
+.site-footer-contact a:hover,
+.site-footer-facebook:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+.site-footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  font-style: normal;
+}
+
+.site-footer-contact span {
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.site-footer-message {
+  max-width: 260px;
+  margin: 0 0 22px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.site-footer-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 18px;
+
+  background: var(--insaec-cyan);
+  color: var(--insaec-blue);
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  font-size: 0.82rem;
+  font-weight: 800;
+
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.site-footer-whatsapp:hover {
+  background: var(--insaec-yellow);
+  transform: translateY(-2px);
+}
+
+.site-footer-facebook {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 15px;
+  padding: 10px 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 0.82rem;
+  font-weight: 700;
+
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.site-footer-facebook:hover {
+  background: #1877f2;
+  border-color: #1877f2;
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+.site-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  width: min(1180px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 20px 0 24px;
+}
+
+.site-footer-bottom p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.52);
+
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+/* =========================================================
+   MÓVIL — OCULTAR TARJETA DE UBICACIÓN
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .contact-visual {
+    display: none;
+  }
+
+}
+/* =========================================================
+   FOOTER — AJUSTE MÓVIL
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .site-footer-inner {
+    width: calc(100% - 40px);
+    padding: 60px 0 50px;
+
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .site-footer-brand {
+    padding-right: 0;
+  }
+
+  .site-footer-column {
+    width: 100%;
+  }
+
+  .site-footer-message {
+    max-width: 100%;
+  }
+
+  .site-footer-bottom {
+    width: calc(100% - 40px);
+    padding: 20px 0 24px;
+  }
+
+}
+/* =========================================
+   INSTITUCIÓN — QUIÉNES SOMOS
+   ========================================= */
+
+.institution-about-section {
+  position: relative;
+  padding: 130px 20px 140px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.institution-about-inner {
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(380px, 0.8fr);
+  align-items: center;
+  gap: 90px;
+}
+
+.institution-about-copy {
+  max-width: 650px;
+}
+.institution-about-copy {
+  position: relative;
+}
+
+.institution-about-copy-puzzle {
+  position: absolute;
+  width: 95px;
+  height: auto;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.institution-about-copy-puzzle-one {
+  top: -55px;
+  left: -85px;
+  transform: rotate(-10deg);
+}
+
+.institution-about-copy-puzzle-two {
+  right: -45px;
+  bottom: -55px;
+  transform: rotate(10deg);
+}
+.institution-about-copy .eyebrow {
+  margin-bottom: 20px;
+}
+
+.institution-about-copy h2 {
+  margin: 0 0 30px;
+  color: var(--insaec-blue);
+  font-size: clamp(2.5rem, 4vw, 4.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.institution-about-intro {
+  margin: 0 0 20px;
+  color: #334155;
+  font-size: 1.18rem;
+  line-height: 1.75;
+  max-width: 620px;
+}
+
+.institution-about-text {
+  margin: 0;
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 590px;
+}
+
+.institution-about-visual {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.institution-about-photo {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  width: 72%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: 0 24px 60px rgba(23, 54, 93, 0.12);
+  z-index: 1;
+}
+
+.institution-about-photo img {
+  display: block;
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+}
+
+.institution-about-puzzle {
+  position: absolute;
+  width: 180px;
+  height: auto;
+  z-index: 2;
+  opacity: 0.72;
+}
+
+.institution-about-puzzle {
+  position: absolute;
+  width: 120px;
+  height: auto;
+  z-index: 4;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.institution-about-puzzle-one {
+  top: -10%;
+  left: 10%;
+  transform: rotate(-10deg);
+}
+
+.institution-about-puzzle-two {
+  right: -6%;
+  bottom: -8%;
+  transform: rotate(12deg);
+}
+
+.institution-about-highlight {
+  position: absolute;
+  z-index: 3;
+  right: -2%;
+  bottom: 8%;
+  width: min(100%, 340px);
+  padding: 42px 38px;
+  background: #f7f9fc;
+  border-radius: 28px;
+  border-left: 5px solid var(--insaec-cyan);
+  box-shadow: 0 24px 60px rgba(23, 54, 93, 0.12);
+}
+
+.institution-about-highlight span {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--insaec-cyan);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.institution-about-highlight strong {
+  display: block;
+  color: var(--insaec-blue);
+  font-size: 1.55rem;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+/* =========================================================
+   INSTITUTION — MOBILE
+   QUIÉNES SOMOS
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .institution-about-section {
+    padding: 90px 24px 100px;
+  }
+
+  .institution-about-inner {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .institution-about-copy {
+    width: 100%;
+    max-width: 680px;
+  }
+
+  .institution-about-copy h2 {
+    font-size: clamp(2.6rem, 8vw, 3.8rem);
+    line-height: 1.05;
+    max-width: 620px;
+  }
+
+  .institution-about-intro {
+    max-width: 620px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  .institution-about-text {
+    max-width: 620px;
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .institution-about-visual {
+    width: 100%;
+    min-height: 460px;
+  }
+
+  .institution-about-photo {
+    left: 0;
+    width: 76%;
+  }
+
+  .institution-about-photo img {
+    height: 360px;
+  }
+
+  .institution-about-highlight {
+    right: 0;
+    bottom: 3%;
+    width: min(70%, 330px);
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .institution-about-section {
+    padding: 75px 20px 85px;
+  }
+
+  .institution-about-inner {
+    gap: 50px;
+  }
+
+  .institution-about-copy {
+    max-width: 100%;
+  }
+
+  .institution-about-copy-puzzle {
+    display: none;
+  }
+
+  .institution-about-copy h2 {
+    font-size: clamp(2.5rem, 11vw, 3.4rem);
+    line-height: 1.04;
+    letter-spacing: -0.04em;
+    max-width: 100%;
+  }
+
+  .institution-about-intro {
+    margin-bottom: 22px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .institution-about-text {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .institution-about-visual {
+    min-height: 390px;
+  }
+
+  .institution-about-photo {
+    width: 82%;
+    left: 0;
+  }
+
+  .institution-about-photo img {
+    height: 300px;
+  }
+
+  .institution-about-highlight {
+    right: 0;
+    bottom: 0;
+    width: 68%;
+    padding: 30px 26px;
+    border-radius: 24px;
+  }
+
+  .institution-about-highlight span {
+    margin-bottom: 12px;
+  }
+
+  .institution-about-highlight strong {
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+
+}
+/* =========================================================
+   INSTITUTION — NUESTRA IDENTIDAD
+   ========================================================= */
+
+.institution-identity-section {
+  position: relative;
+  padding: 120px 20px 130px;
+  background: #f7f9fc;
+  overflow: hidden;
+}
+
+.institution-identity-inner {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 1180px);
+  margin: 0 auto;
+}
+
+.institution-identity-heading {
+  max-width: 760px;
+  margin-bottom: 65px;
+}
+
+.institution-identity-heading .eyebrow {
+  margin-bottom: 20px;
+}
+
+.institution-identity-heading h2 {
+  margin: 0;
+  color: var(--insaec-blue);
+  font-size: clamp(2.5rem, 4vw, 4.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+
+/* ---------------------------------------------------------
+   Marca de agua — pieza decorativa
+   --------------------------------------------------------- */
+
+.institution-identity-section::before {
+  content: '';
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  top: 50%;
+  right: -150px;
+  transform: translateY(-50%);
+  background-image: url('./assets/insaec/puzzle-decorativo-1.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.099;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+/* ---------------------------------------------------------
+   Tarjetas
+   --------------------------------------------------------- */
+
+.institution-identity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.institution-identity-card {
+  position: relative;
+  min-height: 330px;
+  padding: 48px 46px;
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 18px 50px rgba(23, 54, 93, 0.08);
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.institution-identity-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 28px 65px rgba(23, 54, 93, 0.14);
+}
+
+.institution-identity-card::after {
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  right: -70px;
+  bottom: -70px;
+  border-radius: 50%;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.institution-identity-card-mission {
+  border-top: 5px solid var(--insaec-cyan);
+}
+
+.institution-identity-card-mission::after {
+  background: var(--insaec-cyan);
+}
+
+.institution-identity-card-vision {
+  border-top: 5px solid var(--insaec-green);
+}
+
+.institution-identity-card-vision::after {
+  background: var(--insaec-green);
+}
+
+.institution-identity-number {
+  display: block;
+  margin-bottom: 30px;
+  color: #94a3b8;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.institution-identity-card h3 {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 22px;
+  color: var(--insaec-blue);
+  font-size: 2rem;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.institution-identity-card p {
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+  margin: 0;
+  color: #64748b;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   INSTITUTION — NUESTRA IDENTIDAD / RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .institution-identity-section {
+    padding: 90px 20px 100px;
+  }
+
+  .institution-identity-heading {
+    margin-bottom: 45px;
+  }
+
+  .institution-identity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .institution-identity-card {
+    min-height: auto;
+  }
+
+  .institution-identity-section::before {
+    width: 420px;
+    height: 420px;
+    right: -180px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .institution-identity-section {
+    padding: 75px 18px 85px;
+  }
+
+  .institution-identity-heading h2 {
+    font-size: clamp(2.25rem, 10vw, 3rem);
+  }
+
+  .institution-identity-card {
+    padding: 38px 30px;
+    border-radius: 24px;
+  }
+
+  .institution-identity-card h3 {
+    font-size: 1.7rem;
+  }
+
+  .institution-identity-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .institution-identity-section::before {
+    width: 300px;
+    height: 300px;
+    right: -150px;
+    top: 58%;
+  }
+
+}
+/* =========================================================
+   INSTITUTION — NUESTRA FILOSOFÍA
+   ========================================================= */
+
+.institution-philosophy-section {
+  position: relative;
+  padding: 130px 20px 150px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.institution-philosophy-inner {
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.85fr);
+  align-items: center;
+  gap: 90px;
+}
+
+
+/* ---------------------------------------------------------
+   Texto
+   --------------------------------------------------------- */
+
+.institution-philosophy-copy {
+  position: relative;
+  max-width: 650px;
+}
+
+.institution-philosophy-copy .eyebrow {
+  margin-bottom: 20px;
+}
+
+.institution-philosophy-copy h2 {
+  margin: 0 0 32px;
+  color: var(--insaec-blue);
+  font-size: clamp(2.7rem, 4.2vw, 4.4rem);
+  line-height: 1.03;
+  letter-spacing: -0.04em;
+}
+
+.institution-philosophy-intro {
+  max-width: 610px;
+  margin: 0 0 22px;
+  color: #334155;
+  font-size: 1.18rem;
+  line-height: 1.75;
+}
+
+.institution-philosophy-text {
+  max-width: 590px;
+  margin: 0;
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+
+/* ---------------------------------------------------------
+   Composición de piezas
+   --------------------------------------------------------- */
+
+/* ---------------------------------------------------------
+   Composición de piezas
+   --------------------------------------------------------- */
+
+.institution-philosophy-visual {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.institution-philosophy-piece {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  animation: philosophyPieceIn 0.9s ease-out forwards;
+}
+
+.institution-philosophy-piece-one {
+  width: 245px;
+  top: 8%;
+  left: 8%;
+  transform: rotate(-8deg);
+  z-index: 1;
+  animation-delay: 0.05s;
+}
+
+.institution-philosophy-piece-two {
+  width: 190px;
+  right: 4%;
+  top: 22%;
+  transform: rotate(10deg);
+  z-index: 2;
+  animation-delay: 0.2s;
+}
+
+.institution-philosophy-piece-three {
+  width: 210px;
+  left: 24%;
+  bottom: 4%;
+  transform: rotate(-6deg);
+  z-index: 1;
+  animation-delay: 0.35s;
+}
+
+.institution-philosophy-piece img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* Pieza principal */
+
+.institution-philosophy-piece-one {
+  width: 245px;
+  top: 8%;
+  left: 8%;
+  transform: rotate(-8deg);
+  z-index: 1;
+}
+
+
+/* Pieza secundaria */
+
+.institution-philosophy-piece-two {
+  width: 190px;
+  right: 4%;
+  top: 22%;
+  transform: rotate(10deg);
+  z-index: 2;
+}
+
+
+/* Pieza inferior */
+
+.institution-philosophy-piece-three {
+  width: 210px;
+  left: 24%;
+  bottom: 4%;
+  transform: rotate(-6deg);
+  z-index: 1;
+}
+
+
+/* ---------------------------------------------------------
+   Mensaje central
+   --------------------------------------------------------- */
+
+.institution-philosophy-message {
+  position: relative;
+  z-index: 4;
+  width: 270px;
+  min-height: 270px;
+  padding: 48px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #f7f9fc;
+  border-radius: 50%;
+  box-shadow: 0 24px 60px rgba(23, 54, 93, 0.1);
+  text-align: center;
+    animation: philosophyMessageIn 0.9s ease-out 0.2s both;
+}
+
+.institution-philosophy-message span {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--insaec-cyan);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.institution-philosophy-message strong {
+  color: var(--insaec-blue);
+  font-size: 1.65rem;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+/* ---------------------------------------------------------
+   Animación — Nuestra Filosofía
+   --------------------------------------------------------- */
+
+@keyframes philosophyPieceIn {
+  from {
+    opacity: 0;
+    margin-top: 25px;
+  }
+
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+/* ---------------------------------------------------------
+   Responsive
+   --------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+  .institution-philosophy-section {
+    padding: 100px 20px 115px;
+  }
+
+  .institution-philosophy-inner {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .institution-philosophy-copy {
+    max-width: 700px;
+  }
+
+  .institution-philosophy-visual {
+    min-height: 460px;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .institution-philosophy-section {
+    padding: 80px 18px 90px;
+  }
+
+  .institution-philosophy-copy h2 {
+    font-size: clamp(2.35rem, 10vw, 3.2rem);
+  }
+
+  .institution-philosophy-intro {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .institution-philosophy-text {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .institution-philosophy-visual {
+    min-height: 390px;
+  }
+
+  .institution-philosophy-piece-one {
+    width: 175px;
+    left: 0;
+    top: 5%;
+  }
+
+  .institution-philosophy-piece-two {
+    width: 145px;
+    right: -2%;
+    top: 18%;
+  }
+
+  .institution-philosophy-piece-three {
+    width: 155px;
+    left: 16%;
+    bottom: 0;
+  }
+
+  .institution-philosophy-message {
+    width: 210px;
+    min-height: 210px;
+    padding: 35px 28px;
+  }
+
+  .institution-philosophy-message strong {
+    font-size: 1.35rem;
+  }
+
+}
+/* =========================================================
+   INSTITUTION — CONOZCAMOS INSAEC
+   ========================================================= */
+
+.institution-contact-section {
+  position: relative;
+  padding: 120px 20px;
+  background: var(--insaec-blue);
+  overflow: hidden;
+}
+
+.institution-contact-section::before {
+  content: '';
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  right: -120px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url('./assets/insaec/puzzle-decorativo-1.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.099;
+  pointer-events: none;
+}
+
+.institution-contact-inner {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.7fr);
+  align-items: center;
+  gap: 90px;
+}
+
+
+/* ---------------------------------------------------------
+   Texto
+   --------------------------------------------------------- */
+
+.institution-contact-copy {
+  max-width: 650px;
+  opacity: 0;
+  animation: institutionContactCopyIn 0.8s ease-out 0.1s forwards;
+}
+
+.institution-contact-copy .eyebrow {
+  margin-bottom: 20px;
+  color: var(--insaec-cyan);
+}
+
+.institution-contact-copy h2 {
+  margin: 0 0 30px;
+  color: #ffffff;
+  font-size: clamp(2.7rem, 4.2vw, 4.4rem);
+  line-height: 1.03;
+  letter-spacing: -0.04em;
+}
+
+.institution-contact-intro {
+  max-width: 600px;
+  margin: 0 0 35px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.12rem;
+  line-height: 1.75;
+}
+
+
+/* ---------------------------------------------------------
+   Botón
+   --------------------------------------------------------- */
+
+.institution-contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 30px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--insaec-blue);
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.institution-contact-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ---------------------------------------------------------
+   Ubicación
+   --------------------------------------------------------- */
+
+.institution-contact-location {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.institution-contact-location-card {
+  width: min(100%, 390px);
+  padding: 48px 42px;
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.16);
+
+  opacity: 0;
+  animation: institutionContactCardIn 0.8s ease-out 0.25s forwards;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.institution-contact-location-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 32px 70px rgba(0, 0, 0, 0.2);
+}
+
+.institution-contact-location-card > span {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--insaec-cyan);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.institution-contact-location-card h3 {
+  margin: 0 0 22px;
+  color: var(--insaec-blue);
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.institution-contact-location-card p {
+  margin: 0 0 28px;
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.institution-contact-map-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--insaec-blue);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: none;
+  border-bottom: 2px solid var(--insaec-cyan);
+  padding-bottom: 4px;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.institution-contact-map-link:hover {
+  color: var(--insaec-cyan);
+  transform: translateX(4px);
+}
+
+
+/* ---------------------------------------------------------
+   Animaciones
+   --------------------------------------------------------- */
+
+@keyframes institutionContactCopyIn {
+  from {
+    opacity: 0;
+    margin-left: -25px;
+  }
+
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+@keyframes institutionContactCardIn {
+  from {
+    opacity: 0;
+    margin-right: -25px;
+  }
+
+  to {
+    opacity: 1;
+    margin-right: 0;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .institution-contact-section {
+    padding: 95px 20px 105px;
+  }
+
+  .institution-contact-inner {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .institution-contact-copy {
+    max-width: 700px;
+  }
+
+  .institution-contact-location {
+    justify-content: flex-start;
+  }
+
+  .institution-contact-section::before {
+    width: 420px;
+    height: 420px;
+    right: -180px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .institution-contact-section {
+    padding: 80px 18px 90px;
+  }
+
+  .institution-contact-copy h2 {
+    font-size: clamp(2.35rem, 10vw, 3.2rem);
+  }
+
+  .institution-contact-intro {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .institution-contact-button {
+    width: 100%;
+  }
+
+  .institution-contact-location-card {
+    padding: 38px 30px;
+    border-radius: 24px;
+  }
+
+  .institution-contact-section::before {
+    width: 300px;
+    height: 300px;
+    right: -150px;
+    top: 65%;
+  }
+
+}
+/* =========================================================
+   INSTITUTION — MOBILE
+   NUESTRA IDENTIDAD
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .institution-identity-section {
+    padding: 90px 24px 100px;
+  }
+
+  .institution-identity-inner {
+    width: 100%;
+  }
+
+  .institution-identity-heading {
+    margin-bottom: 45px;
+  }
+
+  .institution-identity-heading h2 {
+    font-size: clamp(2.6rem, 8vw, 3.8rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+  }
+
+  .institution-identity-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .institution-identity-card {
+    min-height: auto;
+    padding: 42px 36px;
+  }
+
+  .institution-identity-card h3 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  .institution-identity-card p {
+    max-width: 100%;
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .institution-identity-section {
+    padding: 75px 20px 85px;
+  }
+
+  .institution-identity-heading {
+    margin-bottom: 38px;
+  }
+
+  .institution-identity-heading h2 {
+    font-size: clamp(2.4rem, 10.5vw, 3.3rem);
+    line-height: 1.05;
+  }
+
+  .institution-identity-grid {
+    gap: 24px;
+  }
+
+  .institution-identity-card {
+    padding: 36px 28px;
+    border-radius: 26px;
+  }
+
+  .institution-identity-number {
+    font-size: 0.8rem;
+  }
+
+  .institution-identity-card h3 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+
+  .institution-identity-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+}
+/* =========================================================
+   VIDA ESCOLAR — VIVIMOS EL APRENDIZAJE — RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .vida-escolar-learning-section {
+    padding: 90px 24px 100px;
+  }
+
+  .vida-escolar-learning-inner {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .vida-escolar-learning-copy {
+    max-width: 680px;
+  }
+
+  .vida-escolar-learning-copy h2 {
+    max-width: 620px;
+
+    font-size: clamp(
+      2.7rem,
+      8vw,
+      4rem
+    );
+
+    line-height: 1.04;
+  }
+
+  .vida-escolar-learning-copy p:not(.eyebrow) {
+    max-width: 620px;
+
+    font-size: 1.05rem;
+
+    line-height: 1.75;
+  }
+
+  .vida-escolar-learning-visual {
+    min-height: auto;
+
+    justify-content: center;
+  }
+
+  .vida-escolar-learning-photo {
+    width: 90%;
+
+    max-width: 680px;
+  }
+
+  .vida-escolar-learning-photo img {
+    height: 420px;
+  }
+
+  .vida-escolar-learning-section::after {
+    right: -120px;
+    top: 62%;
+
+    width: 300px;
+    height: 300px;
+
+    opacity: 0.055;
+  }
+}
+
+@media (max-width: 600px) {
+  .vida-escolar-learning-section {
+    padding: 75px 20px 85px;
+  }
+
+  .vida-escolar-learning-inner {
+    gap: 42px;
+  }
+
+  .vida-escolar-learning-copy {
+    max-width: 100%;
+  }
+
+  .vida-escolar-learning-copy .eyebrow {
+    margin-bottom: 14px;
+
+    font-size: 0.7rem;
+  }
+
+  .vida-escolar-learning-copy h2 {
+    max-width: 100%;
+
+    margin-bottom: 24px;
+
+    font-size: clamp(
+      2.45rem,
+      11vw,
+      3.3rem
+    );
+
+    line-height: 1.04;
+
+    letter-spacing: -0.04em;
+  }
+
+  .vida-escolar-learning-copy p:not(.eyebrow) {
+    max-width: 100%;
+
+    margin-bottom: 18px;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+  }
+
+  .vida-escolar-learning-photo {
+    width: 100%;
+
+    border-radius: 26px;
+  }
+
+  .vida-escolar-learning-photo img {
+    height: 330px;
+  }
+
+  .vida-escolar-learning-section::after {
+    right: -135px;
+    top: 58%;
+
+    width: 270px;
+    height: 270px;
+
+    opacity: 0.045;
+  }
+}
+/* =========================================================
+   VIDA ESCOLAR — MOMENTOS QUE FORMAN PARTE DE NUESTRA HISTORIA
+========================================================= */
+
+.vida-escolar-gallery-section {
+  position: relative;
+
+  padding: 125px 20px 135px;
+
+  background: #f5f8fb;
+
+  overflow: hidden;
+}
+
+.vida-escolar-gallery-inner {
+  position: relative;
+
+  width: min(100%, var(--container));
+
+  margin: 0 auto;
+}
+
+.vida-escolar-gallery-heading {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 700px;
+
+  margin-bottom: 65px;
+}
+
+.vida-escolar-gallery-heading .eyebrow {
+  margin: 0 0 18px;
+
+  color: var(--insaec-blue);
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.vida-escolar-gallery-heading h2 {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: var(--insaec-blue);
+
+  font-size: clamp(
+    3rem,
+    5vw,
+    5rem
+  );
+
+  font-weight: 800;
+
+  letter-spacing: -0.045em;
+
+  line-height: 0.98;
+}
+
+.vida-escolar-gallery-grid {
+  position: relative;
+
+  min-height: 650px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.45fr)
+    minmax(260px, 0.75fr);
+
+  grid-template-rows:
+    310px
+    280px;
+
+  gap: 24px;
+}
+
+.vida-escolar-gallery-grid::before {
+  content: "";
+
+  position: absolute;
+
+  left: -58px;
+  bottom: 55px;
+
+  width: 150px;
+  height: 150px;
+
+  background:
+    url('./assets/insaec/puzzle-decorativo-2.svg')
+    center / contain no-repeat;
+
+  opacity: 1;
+
+  transform: rotate(10deg);
+
+  pointer-events: none;
+
+  z-index: 5;
+}
+
+.vida-escolar-gallery-grid::after {
+  content: "";
+
+  position: absolute;
+
+  right: -58px;
+  top: -55px;
+
+  width: 145px;
+  height: 145px;
+
+  background:
+    url('./assets/insaec/puzzle-decorativo-4.svg')
+    center / contain no-repeat;
+
+  opacity: 1;
+
+  transform: rotate(-10deg);
+
+  pointer-events: none;
+
+  z-index: 5;
+}
+
+.vida-escolar-gallery-main,
+.vida-escolar-gallery-secondary,
+.vida-escolar-gallery-tertiary {
+  position: relative;
+
+  z-index: 1;
+
+  overflow: hidden;
+
+  background: #dfe7ee;
+
+  box-shadow:
+    0 20px 50px rgba(23, 54, 93, 0.1);
+}
+
+.vida-escolar-gallery-main {
+  grid-row: 1 / 3;
+
+  border-radius: 34px 12px 34px 12px;
+}
+
+.vida-escolar-gallery-secondary {
+  border-radius: 12px 34px 12px 34px;
+}
+
+.vida-escolar-gallery-tertiary {
+  border-radius: 34px 12px 34px 12px;
+}
+
+.vida-escolar-gallery-main img,
+.vida-escolar-gallery-secondary img,
+.vida-escolar-gallery-tertiary img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.6s ease;
+}
+
+.vida-escolar-gallery-main img {
+  object-position: center;
+}
+
+.vida-escolar-gallery-secondary img {
+  object-position: center;
+}
+
+.vida-escolar-gallery-tertiary img {
+  object-position: center;
+}
+
+.vida-escolar-gallery-main:hover img,
+.vida-escolar-gallery-secondary:hover img,
+.vida-escolar-gallery-tertiary:hover img {
+  transform: scale(1.025);
+}
+/* =========================================================
+   VIDA ESCOLAR — GALERÍA — SOLO ESCRITORIO / TABLET
+========================================================= */
+
+@media (max-width: 767px) {
+  .vida-escolar-gallery-section {
+    display: none;
+  }
+}
+
+/* =========================================================
+   VIDA ESCOLAR — MÁS ALLÁ DEL AULA
+========================================================= */
+
+.vida-escolar-beyond-section {
+  position: relative;
+  padding: 135px 20px 145px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.vida-escolar-beyond-inner {
+  position: relative;
+  width: min(100%, var(--container));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 95px;
+  align-items: center;
+}
+
+.vida-escolar-beyond-visual {
+  position: relative;
+  min-height: 590px;
+}
+
+.vida-escolar-beyond-photo {
+  position: absolute;
+  overflow: hidden;
+  box-shadow: 0 24px 55px rgba(23, 54, 93, 0.12);
+}
+
+.vida-escolar-beyond-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.vida-escolar-beyond-photo:hover img {
+  transform: scale(1.025);
+}
+
+.vida-escolar-beyond-photo-one {
+  left: 0;
+  top: 35px;
+  width: 72%;
+  height: 470px;
+  border-radius: 34px 12px 34px 12px;
+  z-index: 1;
+}
+
+.vida-escolar-beyond-photo-two {
+  right: 0;
+  bottom: 0;
+  width: 48%;
+  height: 280px;
+  border-radius: 12px 34px 12px 34px;
+  z-index: 2;
+  border: 10px solid #ffffff;
+}
+
+.vida-escolar-beyond-puzzle {
+  position: absolute;
+  right: 3%;
+  top: -25px;
+  width: 125px;
+  height: 125px;
+  object-fit: contain;
+  z-index: 3;
+}
+
+.vida-escolar-beyond-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.vida-escolar-beyond-copy .eyebrow {
+  margin: 0 0 18px;
+  color: var(--insaec-blue);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.vida-escolar-beyond-copy h2 {
+  max-width: 580px;
+  margin: 0 0 30px;
+  color: var(--insaec-blue);
+  font-size: clamp(3rem, 4.5vw, 4.6rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+}
+
+.vida-escolar-beyond-copy > p:not(.eyebrow) {
+  max-width: 540px;
+  margin: 0 0 32px;
+  color: var(--text-soft);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.vida-escolar-beyond-copy .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   VIDA ESCOLAR — MÁS ALLÁ DEL AULA — RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .vida-escolar-beyond-section {
+    padding: 95px 24px 105px;
+  }
+
+  .vida-escolar-beyond-inner {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 65px;
+  }
+
+  .vida-escolar-beyond-visual {
+    min-height: 520px;
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .vida-escolar-beyond-copy {
+    max-width: 680px;
+  }
+
+  .vida-escolar-beyond-copy h2 {
+    font-size: clamp(2.8rem, 7vw, 4.2rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .vida-escolar-beyond-section {
+    padding: 75px 20px 85px;
+  }
+
+  .vida-escolar-beyond-inner {
+    gap: 45px;
+  }
+
+  .vida-escolar-beyond-visual {
+    min-height: 390px;
+  }
+
+  .vida-escolar-beyond-photo-one {
+    top: 20px;
+    left: 0;
+    width: 88%;
+    height: 300px;
+    border-radius: 26px 10px 26px 10px;
+  }
+
+  .vida-escolar-beyond-photo-two {
+    right: 0;
+    bottom: 0;
+    width: 48%;
+    height: 170px;
+    border-width: 7px;
+    border-radius: 10px 26px 10px 26px;
+  }
+
+  .vida-escolar-beyond-puzzle {
+    right: 1%;
+    top: -10px;
+    width: 85px;
+    height: 85px;
+  }
+
+  .vida-escolar-beyond-copy .eyebrow {
+    margin-bottom: 14px;
+    font-size: 0.7rem;
+  }
+
+  .vida-escolar-beyond-copy h2 {
+    max-width: 100%;
+    margin-bottom: 24px;
+    font-size: clamp(2.45rem, 11vw, 3.3rem);
+    line-height: 1.04;
+    letter-spacing: -0.04em;
+  }
+
+  .vida-escolar-beyond-copy > p:not(.eyebrow) {
+    margin-bottom: 28px;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .vida-escolar-beyond-copy .button {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   ADMISIONES — UN PROCESO PENSADO PARA LAS FAMILIAS
+========================================================= */
+
+.admisiones-intro-section {
+  position: relative;
+  padding: 120px 20px 130px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.admisiones-intro-inner {
+  position: relative;
+  z-index: 1;
+  width: min(100%, var(--container));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 90px;
+  align-items: center;
+}
+
+.admisiones-intro-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.admisiones-intro-copy .eyebrow {
+  margin: 0 0 18px;
+  color: var(--insaec-blue);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.admisiones-intro-copy h2 {
+  max-width: 560px;
+  margin: 0 0 28px;
+  color: var(--insaec-blue);
+  font-size: clamp(3rem, 4.5vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+}
+
+.admisiones-intro-copy > p:not(.eyebrow) {
+  max-width: 560px;
+  margin: 0 0 32px;
+  color: var(--text-soft);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.admisiones-intro-copy .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admisiones-intro-visual {
+  position: relative;
+  min-height: 510px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.admisiones-intro-photo {
+  position: relative;
+  width: 88%;
+  overflow: hidden;
+  border-radius: 34px 12px 34px 12px;
+  box-shadow: 0 24px 55px rgba(23, 54, 93, 0.12);
+}
+
+.admisiones-intro-photo img {
+  display: block;
+  width: 100%;
+  height: 510px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.admisiones-intro-photo:hover img {
+  transform: scale(1.025);
+}
+
+.admisiones-intro-puzzle {
+  position: absolute;
+  left: 0;
+  bottom: 12px;
+  width: 135px;
+  height: 135px;
+  object-fit: contain;
+  z-index: 3;
+}
+
+/* =========================================================
+   ADMISIONES — RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .admisiones-intro-section {
+    padding: 90px 24px 105px;
+  }
+
+  .admisiones-intro-inner {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .admisiones-intro-copy {
+    max-width: 680px;
+  }
+
+  .admisiones-intro-copy h2 {
+    max-width: 620px;
+    font-size: clamp(2.7rem, 8vw, 4rem);
+    line-height: 1.04;
+  }
+
+  .admisiones-intro-copy > p:not(.eyebrow) {
+    max-width: 620px;
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .admisiones-intro-visual {
+    min-height: auto;
+    justify-content: center;
+  }
+
+  .admisiones-intro-photo {
+    width: 90%;
+    max-width: 680px;
+  }
+
+  .admisiones-intro-photo img {
+    height: 420px;
+  }
+
+  .admisiones-intro-puzzle {
+    left: 2%;
+    bottom: -10px;
+    width: 115px;
+    height: 115px;
+  }
+}
+
+@media (max-width: 600px) {
+  .admisiones-intro-section {
+    padding: 75px 20px 85px;
+  }
+
+  .admisiones-intro-inner {
+    gap: 42px;
+  }
+
+  .admisiones-intro-copy {
+    max-width: 100%;
+  }
+
+  .admisiones-intro-copy .eyebrow {
+    margin-bottom: 14px;
+    font-size: 0.7rem;
+  }
+
+  .admisiones-intro-copy h2 {
+    max-width: 100%;
+    margin-bottom: 24px;
+    font-size: clamp(2.45rem, 11vw, 3.3rem);
+    line-height: 1.04;
+    letter-spacing: -0.04em;
+  }
+
+  .admisiones-intro-copy > p:not(.eyebrow) {
+    max-width: 100%;
+    margin-bottom: 28px;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .admisiones-intro-photo {
+    width: 100%;
+    border-radius: 26px 10px 26px 10px;
+  }
+
+  .admisiones-intro-photo img {
+    height: 330px;
+  }
+
+  .admisiones-intro-puzzle {
+    left: -5px;
+    bottom: -18px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .admisiones-intro-copy .button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   ADMISIONES — NUESTRO PROCESO
+========================================================= */
+
+.admisiones-process-section {
+  position: relative;
+  padding: 125px 20px 135px;
+  background: #f5f8fb;
+  overflow: hidden;
+}
+
+.admisiones-process-inner {
+  position: relative;
+  z-index: 1;
+  width: min(100%, var(--container));
+  margin: 0 auto;
+}
+
+.admisiones-process-heading {
+  max-width: 720px;
+  margin-bottom: 65px;
+}
+
+.admisiones-process-heading .eyebrow {
+  margin: 0 0 18px;
+  color: var(--insaec-blue);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.admisiones-process-heading h2 {
+  max-width: 650px;
+  margin: 0 0 25px;
+  color: var(--insaec-blue);
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+.admisiones-process-heading > p:not(.eyebrow) {
+  max-width: 650px;
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.admisiones-process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.admisiones-process-step {
+  position: relative;
+  min-height: 250px;
+  padding: 32px 30px 34px;
+  background: #ffffff;
+  border: 1px solid rgba(23, 54, 93, 0.07);
+  border-radius: 24px;
+  box-shadow: 0 14px 35px rgba(23, 54, 93, 0.06);
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.admisiones-process-step::after {
+  content: "";
+  position: absolute;
+  right: -45px;
+  bottom: -45px;
+  width: 125px;
+  height: 125px;
+  background:
+    url('./assets/insaec/puzzle-decorativo-4.svg')
+    center / contain no-repeat;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.admisiones-process-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(23, 54, 93, 0.1);
+}
+
+.admisiones-process-step span {
+  display: block;
+  margin-bottom: 22px;
+  color: var(--insaec-blue);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.admisiones-process-step h3 {
+  position: relative;
+  z-index: 1;
+  max-width: 290px;
+  margin: 0 0 15px;
+  color: var(--insaec-blue);
+  font-size: 1.35rem;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.admisiones-process-step p {
+  position: relative;
+  z-index: 1;
+  max-width: 320px;
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   ADMISIONES — NUESTRO PROCESO — RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+  .admisiones-process-section {
+    padding: 100px 24px 110px;
+  }
+
+  .admisiones-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admisiones-process-heading {
+    max-width: 680px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .admisiones-process-section {
+    padding: 75px 20px 85px;
+  }
+
+  .admisiones-process-heading {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .admisiones-process-heading .eyebrow {
+    margin-bottom: 14px;
+    font-size: 0.7rem;
+  }
+
+  .admisiones-process-heading h2 {
+    max-width: 100%;
+    margin-bottom: 24px;
+    font-size: clamp(2.45rem, 11vw, 3.3rem);
+    line-height: 1.04;
+    letter-spacing: -0.04em;
+  }
+
+  .admisiones-process-heading > p:not(.eyebrow) {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .admisiones-process-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .admisiones-process-step {
+    min-height: auto;
+    padding: 28px 25px 30px;
+    border-radius: 22px;
+  }
+
+  .admisiones-process-step span {
+    margin-bottom: 17px;
+  }
+
+  .admisiones-process-step h3 {
+    font-size: 1.25rem;
+  }
+
+  .admisiones-process-step p {
+    font-size: 0.96rem;
+    line-height: 1.65;
+  }
+}
+
+
+/* =========================================================
+   ADMISIONES — ESTAMOS PARA ACOMPAÑARTE
+========================================================= */
+
+.admisiones-closing-section {
+  position: relative;
+  padding: 125px 20px 135px;
+  background: var(--insaec-blue);
+  overflow: hidden;
+}
+
+.admisiones-closing-inner {
+  position: relative;
+  z-index: 1;
+  width: min(100%, var(--container));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 90px;
+  align-items: center;
+}
+
+.admisiones-closing-visual {
+  position: relative;
+  min-height: 520px;
+}
+
+.admisiones-closing-photo {
+  position: relative;
+  width: 88%;
+  height: 520px;
+  overflow: hidden;
+  border-radius: 12px 34px 12px 34px;
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.18);
+}
+
+.admisiones-closing-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.admisiones-closing-photo:hover img {
+  transform: scale(1.025);
+}
+
+.admisiones-closing-puzzle {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  width: 145px;
+  height: 145px;
+  object-fit: contain;
+  z-index: 3;
+}
+
+.admisiones-closing-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.admisiones-closing-copy .eyebrow {
+  margin: 0 0 18px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.admisiones-closing-copy h2 {
+  max-width: 620px;
+  margin: 0 0 30px;
+  color: #ffffff;
+  font-size: clamp(3rem, 4.5vw, 4.6rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+}
+
+.admisiones-closing-copy > p:not(.eyebrow) {
+  max-width: 520px;
+  margin: 0 0 32px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.admisiones-closing-copy .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   ADMISIONES — ESTAMOS PARA ACOMPAÑARTE — RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .admisiones-closing-section {
+    padding: 95px 24px 105px;
+  }
+
+  .admisiones-closing-inner {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .admisiones-closing-visual {
+    min-height: auto;
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .admisiones-closing-photo {
+    width: 90%;
+    max-width: 680px;
+    height: 420px;
+  }
+
+  .admisiones-closing-copy {
+    max-width: 680px;
+  }
+
+  .admisiones-closing-copy h2 {
+    font-size: clamp(2.8rem, 7vw, 4.2rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .admisiones-closing-section {
+    padding: 75px 20px 85px;
+  }
+
+  .admisiones-closing-inner {
+    gap: 42px;
+  }
+
+  .admisiones-closing-visual {
+    min-height: 330px;
+  }
+
+  .admisiones-closing-photo {
+    width: 100%;
+    height: 330px;
+    border-radius: 26px 10px 26px 10px;
+  }
+
+  .admisiones-closing-puzzle {
+    right: -5px;
+    bottom: -15px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .admisiones-closing-copy .eyebrow {
+    margin-bottom: 14px;
+    font-size: 0.7rem;
+  }
+
+  .admisiones-closing-copy h2 {
+    max-width: 100%;
+    margin-bottom: 24px;
+    font-size: clamp(2.45rem, 11vw, 3.3rem);
+    line-height: 1.04;
+    letter-spacing: -0.04em;
+  }
+
+  .admisiones-closing-copy > p:not(.eyebrow) {
+    margin-bottom: 28px;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .admisiones-closing-copy .button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   CONTACTO
+========================================================= */
+
+.contacto-intro-section {
+  position: relative;
+  padding: 120px 20px 130px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.contacto-intro-inner {
+  position: relative;
+  z-index: 1;
+  width: min(100%, var(--container));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 90px;
+  align-items: center;
+}
+
+.contacto-intro-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.contacto-intro-copy .eyebrow {
+  margin: 0 0 18px;
+  color: var(--insaec-blue);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contacto-intro-copy h2 {
+  max-width: 600px;
+  margin: 0 0 28px;
+  color: var(--insaec-blue);
+  font-size: clamp(3rem, 4.5vw, 4.6rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+}
+
+.contacto-intro-copy > p:not(.eyebrow) {
+  max-width: 560px;
+  margin: 0 0 34px;
+  color: var(--text-soft);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.contacto-details {
+  display: grid;
+  gap: 22px;
+  max-width: 560px;
+  margin-bottom: 34px;
+}
+
+.contacto-detail {
+  display: grid;
+  gap: 5px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(23, 54, 93, 0.1);
+}
+
+.contacto-detail:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.contacto-detail-label {
+  color: var(--insaec-blue);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+}
+
+.contacto-detail a,
+.contacto-detail p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contacto-detail a {
+  color: var(--insaec-blue);
+  font-weight: 650;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.contacto-detail a:hover {
+  color: var(--insaec-cyan);
+}
+
+.contacto-intro-copy .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacto-intro-visual {
+  position: relative;
+  min-height: 570px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.contacto-intro-photo {
+  position: relative;
+  width: 88%;
+  overflow: hidden;
+  border-radius: 12px 36px 12px 36px;
+  box-shadow: 0 24px 55px rgba(23, 54, 93, 0.13);
+}
+
+.contacto-intro-photo img {
+  display: block;
+  width: 100%;
+  height: 570px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.contacto-intro-photo:hover img {
+  transform: scale(1.025);
+}
+
+.contacto-intro-puzzle {
+  position: absolute;
+  left: 0;
+  bottom: 12px;
+  width: 145px;
+  height: 145px;
+  object-fit: contain;
+  z-index: 3;
+}
+
+
+/* =========================================================
+   MAPA
+========================================================= */
+
+.contacto-map-section {
+  position: relative;
+  padding: 125px 20px 135px;
+  background: #f5f8fb;
+  overflow: hidden;
+}
+
+.contacto-map-inner {
+  position: relative;
+  z-index: 1;
+  width: min(100%, var(--container));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  gap: 75px;
+  align-items: center;
+}
+
+.contacto-map-heading {
+  position: relative;
+  z-index: 2;
+}
+
+.contacto-map-heading .eyebrow {
+  margin: 0 0 18px;
+  color: var(--insaec-blue);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contacto-map-heading h2 {
+  max-width: 500px;
+  margin: 0 0 26px;
+  color: var(--insaec-blue);
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+.contacto-map-heading > p:not(.eyebrow) {
+  max-width: 500px;
+  margin: 0 0 30px;
+  color: var(--text-soft);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.contacto-map-address {
+  display: grid;
+  gap: 5px;
+  max-width: 500px;
+  margin-bottom: 30px;
+  padding-left: 20px;
+  border-left: 3px solid var(--insaec-cyan);
+}
+
+.contacto-map-address strong {
+  color: var(--insaec-blue);
+  font-size: 1rem;
+  font-weight: 750;
+}
+
+.contacto-map-address span {
+  color: var(--text-soft);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.contacto-map-heading .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacto-map-frame {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  overflow: hidden;
+  background: #dfe7ee;
+  border-radius: 34px 12px 34px 12px;
+  box-shadow: 0 24px 55px rgba(23, 54, 93, 0.12);
+}
+
+.contacto-map-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+/* =========================================================
+   CIERRE
+========================================================= */
+
+.contacto-closing-section {
+  position: relative;
+  padding: 125px 20px 135px;
+  background: var(--insaec-blue);
+  overflow: hidden;
+}
+
+.contacto-closing-section::after {
+  content: "";
+  position: absolute;
+  right: -100px;
+  top: 50%;
+  width: 430px;
+  height: 430px;
+  background:
+    url('./assets/insaec/puzzle-decorativo-3.svg')
+    center / contain no-repeat;
+  opacity: 0.09;
+  transform: translateY(-50%) rotate(-10deg);
+  pointer-events: none;
+}
+
+.contacto-closing-inner {
+  position: relative;
+  z-index: 1;
+  width: min(100%, var(--container));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.7fr);
+  gap: 80px;
+  align-items: center;
+}
+
+.contacto-closing-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.contacto-closing-copy .eyebrow {
+  margin: 0 0 18px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contacto-closing-copy h2 {
+  max-width: 650px;
+  margin: 0 0 30px;
+  color: #ffffff;
+  font-size: clamp(3rem, 4.7vw, 4.8rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+}
+
+.contacto-closing-copy > p:not(.eyebrow) {
+  max-width: 520px;
+  margin: 0 0 32px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.contacto-closing-copy .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacto-closing-visual {
+  position: relative;
+  min-height: 420px;
+}
+
+.contacto-closing-puzzle {
+  position: absolute;
+  right: 35px;
+  top: 50%;
+  width: 360px;
+  height: 360px;
+  object-fit: contain;
+  transform: translateY(-50%) rotate(8deg);
+  opacity: 0.95;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .contacto-intro-inner {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .contacto-intro-visual {
+    min-height: 480px;
+  }
+
+  .contacto-intro-photo {
+    width: 90%;
+    max-width: 700px;
+  }
+
+  .contacto-intro-photo img {
+    height: 480px;
+  }
+
+  .contacto-intro-puzzle {
+    left: 2%;
+    bottom: -8px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .contacto-map-inner {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .contacto-map-heading {
+    max-width: 700px;
+  }
+
+  .contacto-map-frame {
+    height: 500px;
+  }
+
+  .contacto-closing-inner {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .contacto-closing-visual {
+    min-height: 280px;
+  }
+
+  .contacto-closing-puzzle {
+    right: 8%;
+    width: 280px;
+    height: 280px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .contacto-intro-section {
+    padding: 75px 20px 85px;
+  }
+
+  .contacto-intro-inner {
+    gap: 42px;
+  }
+
+  .contacto-intro-copy h2 {
+    font-size: clamp(2.5rem, 11vw, 3.3rem);
+  }
+
+  .contacto-intro-copy > p:not(.eyebrow) {
+    font-size: 1rem;
+  }
+
+  .contacto-details {
+    gap: 18px;
+  }
+
+  .contacto-intro-copy .button {
+    width: 100%;
+  }
+
+  .contacto-intro-visual {
+    min-height: 330px;
+  }
+
+  .contacto-intro-photo {
+    width: 100%;
+    border-radius: 26px 10px 26px 10px;
+  }
+
+  .contacto-intro-photo img {
+    height: 330px;
+  }
+
+  .contacto-intro-puzzle {
+    left: -5px;
+    bottom: -18px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .contacto-map-section {
+    padding: 75px 20px 85px;
+  }
+
+  .contacto-map-heading h2 {
+    font-size: clamp(2.5rem, 11vw, 3.4rem);
+  }
+
+  .contacto-map-heading > p:not(.eyebrow) {
+    font-size: 1rem;
+  }
+
+  .contacto-map-heading .button {
+    width: 100%;
+  }
+
+  .contacto-map-frame {
+    height: 360px;
+    border-radius: 26px 10px 26px 10px;
+  }
+
+  .contacto-closing-section {
+    padding: 75px 20px 85px;
+  }
+
+  .contacto-closing-inner {
+    gap: 15px;
+  }
+
+  .contacto-closing-copy h2 {
+    font-size: clamp(2.5rem, 11vw, 3.4rem);
+  }
+
+  .contacto-closing-copy > p:not(.eyebrow) {
+    font-size: 1rem;
+  }
+
+  .contacto-closing-copy .button {
+    width: 100%;
+  }
+
+  .contacto-closing-visual {
+    min-height: 210px;
+  }
+
+  .contacto-closing-puzzle {
+    right: 50%;
+    width: 190px;
+    height: 190px;
+    transform: translate(50%, -50%) rotate(8deg);
+  }
+
+}
+
+
+/* =========================================================
+   PROPUESTA EDUCATIVA
+   ========================================================= */
+
+.propuesta-intro-section {
+  position: relative;
+  padding: 120px 20px 130px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.propuesta-intro-inner {
+  position: relative;
+  z-index: 1;
+  width: min(100%, var(--container));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 90px;
+  align-items: center;
+}
+
+.propuesta-intro-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.propuesta-intro-copy .eyebrow {
+  margin: 0 0 18px;
+  color: var(--insaec-blue);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.propuesta-intro-copy h2 {
+  max-width: 600px;
+  margin: 0 0 28px;
+  color: var(--insaec-blue);
+  font-size: clamp(3rem, 4.5vw, 4.6rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+}
+
+.propuesta-intro-copy > p:not(.eyebrow) {
+  max-width: 570px;
+  margin: 0 0 20px;
+  color: var(--text-soft);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.propuesta-intro-copy > p:last-child {
+  margin-bottom: 0;
+}
+
+.propuesta-intro-visual {
+  position: relative;
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.propuesta-intro-photo {
+  position: relative;
+  width: 88%;
+  overflow: hidden;
+  border-radius: 12px 36px 12px 36px;
+  box-shadow: 0 24px 55px rgba(23, 54, 93, 0.13);
+}
+
+.propuesta-intro-photo img {
+  display: block;
+  width: 100%;
+  height: 540px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.propuesta-intro-photo:hover img {
+  transform: scale(1.025);
+}
+
+.propuesta-intro-puzzle {
+  position: absolute;
+  left: 0;
+  bottom: 12px;
+  width: 145px;
+  height: 145px;
+  object-fit: contain;
+  z-index: 3;
+}
+
+
+/* ---------------------------------------------------------
+   CÓMO APRENDEMOS
+   --------------------------------------------------------- */
+
+.propuesta-learning-section {
+  position: relative;
+  padding: 125px 20px 135px;
+  background: #f5f8fb;
+  overflow: hidden;
+}
+
+.propuesta-learning-inner {
+  position: relative;
+  z-index: 1;
+  width: min(100%, var(--container));
+  margin: 0 auto;
+}
+
+.propuesta-learning-heading {
+  max-width: 720px;
+  margin-bottom: 65px;
+}
+
+.propuesta-learning-heading .eyebrow {
+  margin: 0 0 18px;
+  color: var(--insaec-blue);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.propuesta-learning-heading h2 {
+  max-width: 650px;
+  margin: 0 0 25px;
+  color: var(--insaec-blue);
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+.propuesta-learning-heading > p:not(.eyebrow) {
+  max-width: 650px;
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.propuesta-learning-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.propuesta-learning-card {
+  position: relative;
+  min-height: 350px;
+  padding: 30px 27px 32px;
+  background: #ffffff;
+  border: 1px solid rgba(23, 54, 93, 0.07);
+  border-radius: 24px;
+  box-shadow: 0 14px 35px rgba(23, 54, 93, 0.06);
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.propuesta-learning-card::after {
+  content: "";
+  position: absolute;
+  right: -45px;
+  bottom: -45px;
+  width: 130px;
+  height: 130px;
+  background:
+    url('./assets/insaec/puzzle-decorativo-4.svg')
+    center / contain no-repeat;
+  opacity: 0.11;
+  pointer-events: none;
+}
+
+.propuesta-learning-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(23, 54, 93, 0.1);
+}
+
+.propuesta-learning-card > span {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-bottom: 25px;
+  color: var(--insaec-blue);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.propuesta-learning-card > img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 25px;
+  object-fit: contain;
+}
+
+.propuesta-learning-card h3 {
+  position: relative;
+  z-index: 1;
+  max-width: 250px;
+  margin: 0 0 14px;
+  color: var(--insaec-blue);
+  font-size: 1.3rem;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.propuesta-learning-card p {
+  position: relative;
+  z-index: 1;
+  max-width: 280px;
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+
+/* ---------------------------------------------------------
+   FORMACIÓN INTEGRAL
+   --------------------------------------------------------- */
+
+.propuesta-integral-section {
+  position: relative;
+  padding: 125px 20px 135px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.propuesta-integral-inner {
+  position: relative;
+  z-index: 1;
+  width: min(100%, var(--container));
+  margin: 0 auto;
+}
+
+.propuesta-integral-heading {
+  max-width: 760px;
+  margin-bottom: 65px;
+}
+
+.propuesta-integral-heading .eyebrow {
+  margin: 0 0 18px;
+  color: var(--insaec-blue);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.propuesta-integral-heading h2 {
+  max-width: 680px;
+  margin: 0 0 25px;
+  color: var(--insaec-blue);
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+.propuesta-integral-heading > p:not(.eyebrow) {
+  max-width: 680px;
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.propuesta-integral-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.propuesta-integral-card {
+  position: relative;
+  min-height: 245px;
+  padding: 30px 30px 32px;
+  background: #f5f8fb;
+  border: 1px solid rgba(23, 54, 93, 0.06);
+  border-radius: 24px;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.propuesta-integral-card::after {
+  content: "";
+  position: absolute;
+  right: -42px;
+  bottom: -42px;
+  width: 120px;
+  height: 120px;
+  background:
+    url('./assets/insaec/puzzle-decorativo-2.svg')
+    center / contain no-repeat;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.propuesta-integral-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(23, 54, 93, 0.08);
+}
+
+.propuesta-integral-card span {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-bottom: 22px;
+  color: var(--insaec-blue);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.propuesta-integral-card h3 {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 0 14px;
+  color: var(--insaec-blue);
+  font-size: 1.3rem;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.propuesta-integral-card p {
+  position: relative;
+  z-index: 1;
+  max-width: 330px;
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+
+/* ---------------------------------------------------------
+   CIERRE
+   --------------------------------------------------------- */
+
+.propuesta-closing-section {
+  position: relative;
+  padding: 125px 20px 135px;
+  background: var(--insaec-blue);
+  overflow: hidden;
+}
+
+.propuesta-closing-section::after {
+  content: "";
+  position: absolute;
+  right: -100px;
+  top: 50%;
+  width: 430px;
+  height: 430px;
+  background:
+    url('./assets/insaec/puzzle-decorativo-3.svg')
+    center / contain no-repeat;
+  opacity: 0.09;
+  transform: translateY(-50%) rotate(-10deg);
+  pointer-events: none;
+}
+
+.propuesta-closing-inner {
+  position: relative;
+  z-index: 1;
+  width: min(100%, var(--container));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.7fr);
+  gap: 80px;
+  align-items: center;
+}
+
+.propuesta-closing-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.propuesta-closing-copy .eyebrow {
+  margin: 0 0 18px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.propuesta-closing-copy h2 {
+  max-width: 650px;
+  margin: 0 0 30px;
+  color: #ffffff;
+  font-size: clamp(3rem, 4.7vw, 4.8rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+}
+
+.propuesta-closing-copy > p:not(.eyebrow) {
+  max-width: 520px;
+  margin: 0 0 32px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.propuesta-closing-copy .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.propuesta-closing-visual {
+  position: relative;
+  min-height: 420px;
+}
+
+.propuesta-closing-puzzle {
+  position: absolute;
+  right: 35px;
+  top: 50%;
+  width: 360px;
+  height: 360px;
+  object-fit: contain;
+  transform: translateY(-50%) rotate(8deg);
+  opacity: 0.95;
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+
+  .propuesta-learning-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+@media (max-width: 1000px) {
+
+  .propuesta-intro-inner {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .propuesta-intro-visual {
+    min-height: 480px;
+  }
+
+  .propuesta-intro-photo {
+    width: 90%;
+    max-width: 700px;
+  }
+
+  .propuesta-intro-photo img {
+    height: 480px;
+  }
+
+  .propuesta-intro-puzzle {
+    left: 2%;
+    bottom: -8px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .propuesta-integral-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .propuesta-closing-inner {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .propuesta-closing-visual {
+    min-height: 280px;
+  }
+
+  .propuesta-closing-puzzle {
+    right: 8%;
+    width: 280px;
+    height: 280px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .propuesta-intro-section {
+    padding: 75px 20px 85px;
+  }
+
+  .propuesta-intro-inner {
+    gap: 42px;
+  }
+
+  .propuesta-intro-copy h2 {
+    font-size: clamp(2.5rem, 11vw, 3.3rem);
+  }
+
+  .propuesta-intro-copy > p:not(.eyebrow) {
+    font-size: 1rem;
+  }
+
+  .propuesta-intro-visual {
+    min-height: 330px;
+  }
+
+  .propuesta-intro-photo {
+    width: 100%;
+    border-radius: 26px 10px 26px 10px;
+  }
+
+  .propuesta-intro-photo img {
+    height: 330px;
+  }
+
+  .propuesta-intro-puzzle {
+    left: -5px;
+    bottom: -18px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .propuesta-learning-section {
+    padding: 75px 20px 85px;
+  }
+
+  .propuesta-learning-heading {
+    margin-bottom: 42px;
+  }
+
+  .propuesta-learning-heading h2 {
+    font-size: clamp(2.5rem, 11vw, 3.4rem);
+  }
+
+  .propuesta-learning-heading > p:not(.eyebrow) {
+    font-size: 1rem;
+  }
+
+  .propuesta-learning-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .propuesta-learning-card {
+    min-height: auto;
+    padding: 28px 25px 30px;
+  }
+
+  .propuesta-learning-card > img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .propuesta-integral-section {
+    padding: 75px 20px 85px;
+  }
+
+  .propuesta-integral-heading {
+    margin-bottom: 42px;
+  }
+
+  .propuesta-integral-heading h2 {
+    font-size: clamp(2.5rem, 11vw, 3.4rem);
+  }
+
+  .propuesta-integral-heading > p:not(.eyebrow) {
+    font-size: 1rem;
+  }
+
+  .propuesta-integral-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .propuesta-integral-card {
+    min-height: auto;
+    padding: 28px 25px 30px;
+  }
+
+  .propuesta-closing-section {
+    padding: 75px 20px 85px;
+  }
+
+  .propuesta-closing-inner {
+    gap: 15px;
+  }
+
+  .propuesta-closing-copy h2 {
+    font-size: clamp(2.5rem, 11vw, 3.4rem);
+  }
+
+  .propuesta-closing-copy > p:not(.eyebrow) {
+    font-size: 1rem;
+  }
+
+  .propuesta-closing-copy .button {
+    width: 100%;
+  }
+
+  .propuesta-closing-visual {
+    min-height: 210px;
+  }
+
+  .propuesta-closing-puzzle {
+    right: 50%;
+    width: 190px;
+    height: 190px;
+    transform: translate(50%, -50%) rotate(8deg);
+  }
+
+}
+
